@@ -1,5 +1,5 @@
 metadata:
-  name: data-cleaning
+  name: data-clean
 spec:
   destination:
     server: https://kubernetes.default.svc
