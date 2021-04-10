@@ -1,0 +1,9 @@
+source: data-evaluation-source
+sink: data-evaluation-sink
+
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/cgfulton/mlops/data/data-evaluation
+    targetRevision: main
