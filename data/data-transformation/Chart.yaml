@@ -1,6 +1,6 @@
 apiVersion: v2
-name: data-analysis
+name: data-transformation
 version: 0.0.1
-description: A Helm chart for data analysis
+description: A Helm chart for data transformation
 type application
 
