@@ -1,9 +1,0 @@
-source: data-cleaning-source
-sink: data-cleaning-sink
-
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/cgfulton/mlops/data/data-cleaning
-    targetRevision: main

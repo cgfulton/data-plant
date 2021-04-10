@@ -1,9 +1,0 @@
-source: data-transformation-source
-sink: data-transformation-sink
-
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/cgfulton/mlops/data/data-transformation
-    targetRevision: main

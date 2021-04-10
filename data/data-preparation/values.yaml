@@ -1,9 +1,0 @@
-source: data-preparation-source
-sink: data-preparation-sink
-
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/cgfulton/mlops/data/data-preparation
-    targetRevision: main

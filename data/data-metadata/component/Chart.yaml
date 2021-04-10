@@ -1,0 +1,6 @@
+apiVersion: v2
+name: data-metadata-component
+version: 0.0.1
+description: A Helm chart for data-metadata-component
+type: application
+

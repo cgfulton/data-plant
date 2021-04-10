@@ -1,0 +1,8 @@
+metadata:
+  name: data-cleaning
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/cgfulton/mlops/data/{{ .Values.metadata.name }}
+    targetRevision: main

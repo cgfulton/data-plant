@@ -1,9 +1,0 @@
-source: data-validation-source
-sink: data-validation-sink
-
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/cgfulton/mlops/data/data-validation
-    targetRevision: main

@@ -1,9 +1,0 @@
-source: data-splitting-source
-sink: data-splitting-sink
-
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/cgfulton/mlops/data/data-splitting
-    targetRevision: main

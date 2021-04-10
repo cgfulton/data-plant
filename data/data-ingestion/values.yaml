@@ -1,9 +1,0 @@
-source: data-analysis-source
-sink: data-analysis-sink
-
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/cgfulton/mlops/data/data-analysis
-    targetRevision: main

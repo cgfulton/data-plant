@@ -1,0 +1,6 @@
+apiVersion: v2
+name: data-ingestion-component
+version: 0.0.1
+description: A Helm chart for data-ingestion-component
+type application
+
