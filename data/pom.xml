@@ -12,5 +12,16 @@
 
     <modules>
         <module>data-analysis</module>
+        <module>data-clean</module>
+        <module>data-evaluation</module>
+        <module>data-extraction</module>
+        <module>data-ingestion</module>
+        <module>data-metadata</module>
+        <module>data-preparation</module>
+        <module>data-query</module>
+        <module>data-split</module>
+        <module>data-storage</module>
+        <module>data-transformation</module>
+        <module>data-validation</module>
     </modules>
 </project>
