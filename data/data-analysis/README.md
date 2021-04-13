@@ -60,3 +60,5 @@ oc expose svc/data-analysis
 oc get routes
 curl http://<route>/data-analysis
 ```
+
+
