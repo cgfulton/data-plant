@@ -1,6 +1,6 @@
 apiVersion: v2
-name: data-extraction-component
+name: data-extraction
 version: 0.0.1
-description: A Helm chart for data-extraction-component
+description: A Helm chart for data-extraction
 type: application
 

@@ -1,6 +1,6 @@
 apiVersion: v2
-name: data-evaluation-component
+name: data-evaluation
 version: 0.0.1
-description: A Helm chart for data-evaluation-component
+description: A Helm chart for data-evaluation
 type: application
 

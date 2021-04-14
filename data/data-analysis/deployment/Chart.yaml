@@ -1,6 +1,6 @@
 apiVersion: v2
-name: data-analysis-component
+name: data-analysis
 version: 0.0.1
-description: A Helm chart for data-analysis-component
+description: A Helm chart for data-analysis
 type: application
 

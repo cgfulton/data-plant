@@ -18,7 +18,7 @@
     <module>data-metadata</module>
     <module>data-preparation</module>
     <module>data-query</module>
-    <module>data-split</module>
+    <module>data-splitting</module>
     <module>data-storage</module>
     <module>data-transformation</module>
     <module>data-validation</module>

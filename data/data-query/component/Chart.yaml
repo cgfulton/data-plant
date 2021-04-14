@@ -1,6 +1,0 @@
-apiVersion: v2
-name: data-query-component
-version: 0.0.1
-description: A Helm chart for data-query-component
-type: application
-
