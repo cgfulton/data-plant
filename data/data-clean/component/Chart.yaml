@@ -1,6 +1,0 @@
-apiVersion: v2
-name: data-clean-component
-version: 0.0.1
-description: A Helm chart for data-clean-component
-type: application
-

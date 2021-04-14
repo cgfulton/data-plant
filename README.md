@@ -44,6 +44,10 @@ We believe that true value is inherently derived from concepts with implementati
 
 `Data Query` answers a question. 
 
+### Data Splitting
+
+`Data Splitting` partitioning data.
+
 ### Data Storage
 
 `Data Storage` records data for future retrieval.

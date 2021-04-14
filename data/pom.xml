@@ -11,7 +11,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>data-analysis</module>
-    <module>data-clean</module>
+    <module>data-cleaning</module>
     <module>data-evaluation</module>
     <module>data-extraction</module>
     <module>data-ingestion</module>

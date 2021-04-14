@@ -7,7 +7,7 @@
     <artifactId>data</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>data-clean</artifactId>
+  <artifactId>data-cleaning</artifactId>
   <build>
     <plugins>
       <plugin>
