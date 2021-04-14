@@ -1,0 +1,6 @@
+apiVersion: v2
+name: data-cleaning
+version: 0.0.1
+description: A Helm chart for data-cleaning
+type: application
+
