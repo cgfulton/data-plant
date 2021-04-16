@@ -10,7 +10,6 @@
   <artifactId>data</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>data-analysis/component</module>
     <module>data-cleaning</module>
     <module>data-evaluation</module>
     <module>data-extraction</module>

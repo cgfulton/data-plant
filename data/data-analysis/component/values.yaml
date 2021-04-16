@@ -12,9 +12,9 @@ build:
   enabled: true
 
   ## Git URI, Ref, and ContextDir
-  uri: https://github.com/cgfulton/mlplant/data/data-analysis/component
+  uri: https://github.com/cgfulton/mlplant
   ref: main
-  contextDir:
+  contextDir: data/data-analysis/component
 
   ## Options: jvm or native
   mode: jvm
@@ -27,9 +27,9 @@ build:
       ## Name of the ImageStreamTag
       name: java:11
       ## Is this ImageStreamTag in the same namespace you are releasing to?
-      useReleaseNamespace: true
+      useReleaseNamespace: false
       ## Namespace containing the ImageStreamTag, is useReleaseNamespace == false
-      namespace: data-analysis
+      namespace: openshift
 
   ## Used if mode == 'native'
   ## Creates a Docker build to produce a native Quarkus binary
@@ -48,11 +48,11 @@ build:
     ## DockerImage publishes to an external registry (referred to by image.name and image.tag)
     kind: ImageStreamTag
     ## Push secret name, used only if kind == "DockerImage"
-    pushSecret: data-analysis-pull-secret
+    pushSecret:
 
 
   ## Image pull secret. More information: https://docs.openshift.com/container-platform/4.6/openshift_images/managing_images/using-image-pull-secrets.html
-  pullSecret: data-analysis-push-secret
+  pullSecret:
 
   ## Freeform env for the OCP build. More information: https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/
   env:
