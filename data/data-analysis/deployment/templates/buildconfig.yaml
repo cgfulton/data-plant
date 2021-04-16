@@ -20,18 +20,6 @@ spec:
       uri: {{ .Values.build.uri }}
     contextDir: {{ .Values.build.contextDir }}
     type: Git
-    dockerfile: |-
-      FROM quay.io/repository/quarkus/ubi-quarkus-native-image:20.3.1.2-java11
-      WORKDIR /work/
-      RUN chown 1001 /work \
-      && chmod "g+rwX" /work \
-      && chown 1001:root /work
-      COPY --chown=1001:root target/*-runner /work/application
-
-      EXPOSE 8080
-      USER 1001
-
-      CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]
   strategy:
     sourceStrategy:
       from:
