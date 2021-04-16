@@ -22,8 +22,8 @@ spec:
     type: Git
   strategy:
     type: Docker
-      dockerStrategy:
-        dockerfilePath: { { .Values.build.native.dockerfilePath } }
+    dockerStrategy:
+      dockerfilePath: src/main/docker/Dockerfile.jvm
   successfulBuildsHistoryLimit: 5
   triggers:
     - type: ConfigChange
