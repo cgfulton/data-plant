@@ -17,7 +17,7 @@ build:
   contextDir: data/data-analysis/feature
 
   ## Options: jvm or native
-  mode: native
+  mode: jvm
 
   ## Used if mode == 'jvm'
   ## Creates an S2I build to produce a Quarkus Jar that runs in the JVM
@@ -25,7 +25,7 @@ build:
     ## The ImageStreamTag of the desired builder image
     imageStreamTag:
       ## Name of the ImageStreamTag
-      name: openjdk-11:latest
+      name: openjdk:11
       ## Is this ImageStreamTag in the same namespace you are releasing to?
       useReleaseNamespace: false
       ## Namespace containing the ImageStreamTag, is useReleaseNamespace == false
@@ -36,9 +36,9 @@ build:
   native:
     ## Should Helm generate a default Dockerfile to build a native binary?
     ## Set this to "false" if you would like to provide your own Dockerfile in git
-    useDefaultDockerfile: false
+    useDefaultDockerfile: true
     ## Path to Dockerfile
-    dockerfilePath: src/main/docker/Dockerfile.native
+    dockerfilePath: Dockerfile
 
   ## Specifies where the image will be pushed to once built
   ## More information: https://docs.openshift.com/container-platform/4.6/builds/managing-build-output.html
@@ -50,9 +50,8 @@ build:
     ## Push secret name, used only if kind == "DockerImage"
     pushSecret:
 
-
   ## Image pull secret. More information: https://docs.openshift.com/container-platform/4.6/openshift_images/managing_images/using-image-pull-secrets.html
-  pullSecret: data-analysis-pull-secret
+  pullSecret:
 
   ## Freeform env for the OCP build. More information: https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/
   env:
@@ -61,12 +60,12 @@ build:
 
   ## Freeform resources for the OCP build. More information: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
   resources:
-#   limits:
-#     cpu: "4"
-#     memory: 6Gi
-#    requests:
-#      cpu: "2"
-#      memory: 4Gi
+  # limits:
+  #   cpu: "4"
+  #   memory: 6Gi
+  #  requests:
+  #    cpu: "2"
+  #    memory: 4Gi
 
 ## Application/Deployment-specific values (For configuring Deployment, Service, Route, ConfigMap, etc)
 deploy:
@@ -75,12 +74,12 @@ deploy:
 
   ## Freeform resources for Quarkus. More information: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
   resources:
-    limits:
-      cpu: 100m
-      memory: 512Mi
-    requests:
-      cpu: 50m
-      memory: 512Mi
+  #  limits:
+  #    cpu: 100m
+  #    memory: 256Mi
+  #  requests:
+  #    cpu: 50m
+  #    memory: 128Mi
 
   ## Type of service to create. More information: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
   serviceType: ClusterIP
@@ -140,8 +139,8 @@ deploy:
     mountPath: /deployments/config/
     ## Application properties file contents
     properties: |-
-      quarkus.kubernetes-client.trust-certs=true
-      quarkus.openshift.route.expose=true
+      ## Properties go here
+
   ## Freeform volume mounts. More information: https://kubernetes.io/docs/concepts/storage/volumes/
   volumeMounts:
   #  - name: my-config
