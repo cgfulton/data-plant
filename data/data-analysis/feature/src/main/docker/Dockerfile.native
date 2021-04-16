@@ -21,7 +21,7 @@ WORKDIR /build/
 COPY . /build/
 RUN ./mvnw clean package -Pnative
 
-FROM registry.redhat.io/ubi8/ubi-minimal:latest
+FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
 WORKDIR /deployments/
 COPY --from=builder /build/target/*-runner /deployments/application
 RUN chmod 110 /deployments/application
