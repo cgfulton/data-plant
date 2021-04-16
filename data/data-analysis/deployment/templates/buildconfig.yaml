@@ -25,7 +25,6 @@ spec:
       from:
         kind: ImageStreamTag
         name: openjdk-11:latest
-        namespace: openshift
     type: Source
   successfulBuildsHistoryLimit: 5
   triggers:
