@@ -17,7 +17,7 @@ build:
   contextDir: data/data-analysis/feature
 
   ## Options: jvm or native
-  mode: jvm
+  mode: native
 
   ## Used if mode == 'jvm'
   ## Creates an S2I build to produce a Quarkus Jar that runs in the JVM
