@@ -4,7 +4,7 @@ metadata:
   annotations:
     app.quarkus.io/vcs-url: https://github.com/cgfulton/mlplant.git
   labels:
-    {{- include "quarkus.labels" . | nindent 4 }
+    {{- include "quarkus.labels" . | nindent 4 }}
   name: data-analysis
 spec:
   nodeSelector: null
@@ -16,11 +16,16 @@ spec:
   resources: {}
   runPolicy: Serial
   source:
-    binary: {}
-    type: Binary
+    git:
+      ref: {{ .Values.build.ref }}
+      uri: {{ .Values.build.uri }}
+    contextDir: {{ .Values.build.contextDir }}
+    type: Git
   strategy:
     sourceStrategy:
       from:
         kind: ImageStreamTag
         name: openjdk-11:latest
     type: Source
+  triggers:
+    - type: ConfigChange
