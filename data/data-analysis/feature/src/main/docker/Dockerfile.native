@@ -15,13 +15,13 @@
 #
 ###
 
-FROM registry.access.redhat.com/ubi8/openjdk-11:latest AS builder
+FROM quay.io/repository/quarkus/ubi-quarkus-native-s2i AS builder
 USER root
 WORKDIR /build/
 COPY . /build/
 RUN ./mvnw clean package -Pnative
 
-FROM registry.access.redhat.com/ubi8/openjdk-11:latest
+FROM quay.io/repository/quarkus/ubi-quarkus-native-image
 WORKDIR /deployments/
 COPY --from=builder /build/target/*-runner /deployments/application
 RUN chmod 110 /deployments/application
