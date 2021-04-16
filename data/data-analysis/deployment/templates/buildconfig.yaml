@@ -24,13 +24,13 @@ spec:
 {{- end }}
 {{- if and .Values.build.native.useDefaultDockerfile (eq .Values.build.mode "native") }}
     dockerfile: |-
-      FROM registry.redhat.io/quarkus/mandrel-20-rhel8 AS builder
+      FROM quay.io/quarkus/ubi-quarkus-native-s2i@sha256:cf92fff9ea1a06718c7dfa9ac878eb7844d016e065aecc6421eb80ef8e52010c AS builder
       USER root
       WORKDIR /build/
       COPY . /build/
       RUN ./mvnw clean package -Pnative
       
-      FROM registry.redhat.io/ubi8/ubi-minimal
+      FROM quay.io/quarkus/ubi-quarkus-native-binary-s2i@sha256:f89fdf909b7378c1a69802a8b15539ee71da517b79918b21cac71085754a0c63
       WORKDIR /deployments/
       COPY --from=builder /build/target/*-runner /deployments/application
       RUN chmod 110 /deployments/application
