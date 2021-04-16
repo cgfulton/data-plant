@@ -26,7 +26,7 @@ spec:
       USER root
       WORKDIR /build/
       COPY . /build/
-      RUN ./mvnw clean package -Pnative
+      RUN mvn clean package -Pnative
 
       FROM registry.redhat.io/ubi8/ubi-minimal
       WORKDIR /deployments/
