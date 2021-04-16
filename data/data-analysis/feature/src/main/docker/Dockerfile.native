@@ -15,13 +15,13 @@
 #
 ###
 
-FROM quay.io/quarkus/ubi-quarkus-mandrel AS builder
+FROM quay.io/quarkus/ubi-quarkus-mandrel:20.3.1.2.Final-java11 AS builder
 USER root
 WORKDIR /build/
 COPY . /build/
 RUN ./mvnw clean package -Pnative
 
-FROM quay.io/quarkus/ubi-quarkus-native-image
+FROM quay.io/quarkus/ubi-quarkus-native-image:20.3-java11
 WORKDIR /deployments/
 COPY --from=builder /build/target/*-runner /deployments/application
 RUN chmod 110 /deployments/application
