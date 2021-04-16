@@ -20,12 +20,12 @@ spec:
       uri: {{ .Values.build.uri }}
     contextDir: {{ .Values.build.contextDir }}
     type: Git
-    pullSecret:
-      name: {{ .Values.build.pullSecret }}
   strategy:
     type: Docker
     dockerStrategy:
       dockerfilePath: src/main/docker/Dockerfile.native
+      pullSecret:
+        name: data-analysis-pull-secret
   successfulBuildsHistoryLimit: 5
   triggers:
     - type: ConfigChange
