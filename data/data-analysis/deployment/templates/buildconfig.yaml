@@ -21,16 +21,16 @@ spec:
     contextDir: {{ .Values.build.contextDir }}
     type: Git
     dockerfile: |-
-      FROM registry.redhat.io/quarkus/mandrel-20-rhel8 AS builder
-      USER root
-      WORKDIR /build/
-      COPY . /build/
-      RUN ./mvnw clean package -Pnative
+      FROM registry.access.redhat.com/ubi8/ubi-minimal:8.3
+      WORKDIR /work/
+      RUN chown 1001 /work \
+      && chmod "g+rwX" /work \
+      && chown 1001:root /work
+      COPY --chown=1001:root target/*-runner /work/application
 
-      FROM registry.redhat.io/ubi8/ubi-minimal
-      WORKDIR /deployments/
-      COPY --from=builder /build/target/*-runner /deployments/application
-      RUN chmod 110 /deployments/application
+      EXPOSE 8080
+      USER 1001
+
       CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]
   strategy:
     sourceStrategy:
