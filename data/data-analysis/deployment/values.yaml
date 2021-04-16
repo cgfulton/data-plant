@@ -25,7 +25,7 @@ build:
     ## The ImageStreamTag of the desired builder image
     imageStreamTag:
       ## Name of the ImageStreamTag
-      name: java:latest
+      name: openjdk-11:latest
       ## Is this ImageStreamTag in the same namespace you are releasing to?
       useReleaseNamespace: false
       ## Namespace containing the ImageStreamTag, is useReleaseNamespace == false
