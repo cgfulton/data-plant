@@ -21,11 +21,22 @@ spec:
       uri: {{ .Values.build.uri }}
     contextDir: {{ .Values.build.contextDir }}
     type: Git
+    dockerfile: |-
+      FROM registry.redhat.io/quarkus/mandrel-20-rhel8 AS builder
+      USER root
+      WORKDIR /build/
+      COPY . /build/
+      RUN ./mvnw clean package -Pnative
+
+      FROM registry.redhat.io/ubi8/ubi-minimal
+      WORKDIR /deployments/
+      COPY --from=builder /build/target/*-runner /deployments/application
+      RUN chmod 110 /deployments/application
+      CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]
   strategy:
     sourceStrategy:
-      from:
-        kind: ImageStreamTag
-        name: openjdk-11:latest
-    type: Source
+    type: Docker
+#    dockerStrategy:
+#      dockerfilePath: src/main/docker/Docker.native
   triggers:
     - type: ConfigChange
