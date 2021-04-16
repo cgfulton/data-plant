@@ -36,7 +36,7 @@ build:
   native:
     ## Should Helm generate a default Dockerfile to build a native binary?
     ## Set this to "false" if you would like to provide your own Dockerfile in git
-    useDefaultDockerfile: true
+    useDefaultDockerfile: false
     ## Path to Dockerfile
     dockerfilePath: src/main/docker/Dockerfile.native
 
