@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "data-ingestion.fullname" . }}
+  name: {{ include "data-collection.fullname" . }}
   labels:
-    {{- include "data-ingestion.labels" . | nindent 4 }}
+    {{- include "data-collection.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "data-ingestion.fullname" . }}
+    name: {{ include "data-collection.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
