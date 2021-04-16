@@ -23,7 +23,7 @@ spec:
   strategy:
     type: Docker
     dockerStrategy:
-      dockerfilePath: src/main/docker/Dockerfile.jvm
+      dockerfilePath: src/main/docker/Dockerfile.native
   successfulBuildsHistoryLimit: 5
   triggers:
     - type: ConfigChange
