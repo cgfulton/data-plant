@@ -1,8 +1,0 @@
-metadata:
-  name: data-ingestion
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/cgfulton/mlops/data/{{ .Values.metadata.name }}
-    targetRevision: main

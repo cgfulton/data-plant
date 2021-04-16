@@ -1,8 +1,0 @@
-metadata:
-  name: data-analysis
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/cgfulton/mlplant/data/data-analysis/deployment
-    targetRevision: main

@@ -1,6 +1,0 @@
-apiVersion: v2
-name: data-split-application
-version: 0.0.1
-description: A Helm chart for data-split-application
-type: application
-
