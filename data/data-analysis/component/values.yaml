@@ -27,7 +27,7 @@ build:
       ## Name of the ImageStreamTag
       name: java:11
       ## Is this ImageStreamTag in the same namespace you are releasing to?
-      useReleaseNamespace: false
+      useReleaseNamespace: true
       ## Namespace containing the ImageStreamTag, is useReleaseNamespace == false
       namespace: data-analysis
 
