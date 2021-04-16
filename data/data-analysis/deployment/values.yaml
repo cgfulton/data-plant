@@ -14,7 +14,7 @@ build:
   ## Git URI, Ref, and ContextDir
   uri: https://github.com/cgfulton/mlplant
   ref: main
-  contextDir: data/data-analysis/component
+  contextDir: data/data-analysis/feature
 
   ## Options: jvm or native
   mode: jvm
