@@ -20,6 +20,8 @@ spec:
       uri: {{ .Values.build.uri }}
     contextDir: {{ .Values.build.contextDir }}
     type: Git
+    pullSecret:
+      name: {{ .Values.build.pullSecret }}
   strategy:
     type: Docker
     dockerStrategy:
