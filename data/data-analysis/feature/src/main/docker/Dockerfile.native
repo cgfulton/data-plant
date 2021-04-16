@@ -15,7 +15,7 @@
 #
 ###
 
-FROM quay.io/quarkus/ubi-quarkus-native-binary-s2i AS builder
+FROM quay.io/quarkus/ubi-quarkus-mandrel AS builder
 USER root
 WORKDIR /build/
 COPY . /build/
