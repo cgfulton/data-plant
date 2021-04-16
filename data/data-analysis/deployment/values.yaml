@@ -140,7 +140,8 @@ deploy:
     mountPath: /deployments/config/
     ## Application properties file contents
     properties: |-
-      ## Properties go here
+      quarkus.kubernetes-client.trust-certs=true
+      quarkus.openshift.route.expose=true
   ## Freeform volume mounts. More information: https://kubernetes.io/docs/concepts/storage/volumes/
   volumeMounts:
   #  - name: my-config
