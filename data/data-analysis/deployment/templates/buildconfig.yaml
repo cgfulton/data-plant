@@ -21,10 +21,6 @@ spec:
     contextDir: {{ .Values.build.contextDir }}
     type: Git
   strategy:
-    sourceStrategy:
-      from:
-        kind: ImageStreamTag
-        name: openjdk-11:latest
     type: Docker
       dockerStrategy:
         dockerfilePath: { { .Values.build.native.dockerfilePath } }
