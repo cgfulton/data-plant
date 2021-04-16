@@ -22,7 +22,7 @@ spec:
     contextDir: {{ .Values.build.contextDir }}
     type: Git
     dockerfile: |-
-      FROM registry.redhat.io/quarkus/mandrel-20-rhel8 AS builder AS builder
+      FROM registry.redhat.io/quarkus/mandrel-20-rhel8 AS builder
       USER root
       WORKDIR /build/
       COPY . /build/
