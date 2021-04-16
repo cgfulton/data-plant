@@ -2,19 +2,19 @@
 
 ## Overview
 
-What is ML Plant?
+What is Data Plant?
 
-ML Plant is an opinionated machine learning concept-first approach to deliver machine learning operations.
+Data Plant is an opinionated machine learning concept-first approach to deliver data centric machine learning operations.
 
-Our goal is to define machine learning operational processes using high level abstract concepts. 
+Our goal is to define data processes using abstract constructs. 
 
-We believe that true value is inherently derived from concepts with implementation being solely a means to an ends.
+We believe that value is inherently derived through `ideas` and that a `implementations` are solely **Means To An Ends**.
 
 ## Data Concepts
 
 ### Data Analysis
 
-`Data Analysis` inspects data for useful information and conclusions.
+[Data Analysis](./data-analysis) inspects data for useful information and conclusions.
 
 ### Data Cleaning
 
