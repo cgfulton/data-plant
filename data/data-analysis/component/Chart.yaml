@@ -1,0 +1,13 @@
+apiVersion: v2
+name: data-analysis
+version: 1.0.0-SNAPSHOT
+description: A Helm chart for data-analysis
+type: application
+icon: https://en.wikipedia.org/wiki/Java_(programming_language)#/media/File:Java_programming_language_logo.svg
+keywords:
+  - data
+  - analysis
+  - mlops
+  - machine
+  - learning
+

@@ -4,5 +4,5 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/cgfulton/mlops/data/{{ .Values.metadata.name }}
+    repoURL: https://github.com/cgfulton/mlops/data
     targetRevision: main

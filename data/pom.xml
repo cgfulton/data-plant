@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.acme</groupId>
-    <artifactId>mlops</artifactId>
+    <artifactId>machine-learning-plant</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>data</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>data-analysis</module>
+    <module>data-analysis/component</module>
     <module>data-cleaning</module>
     <module>data-evaluation</module>
     <module>data-extraction</module>
