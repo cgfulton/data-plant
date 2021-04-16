@@ -4,10 +4,8 @@ metadata:
   annotations:
     app.quarkus.io/vcs-url: https://github.com/cgfulton/mlplant.git
   labels:
-    app.kubernetes.io/name: data-analysis
-    app.kubernetes.io/version: 1.0.0-SNAPSHOT
-    app.openshift.io/runtime: quarkus
-  name: data-cleaning
+    {{- include "quarkus.labels" . | nindent 4 }
+  name: data-analysis
 spec:
   nodeSelector: null
   output:
