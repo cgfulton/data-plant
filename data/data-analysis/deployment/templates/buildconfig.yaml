@@ -25,7 +25,9 @@ spec:
       from:
         kind: ImageStreamTag
         name: openjdk-11:latest
-    type: Source
+    type: Docker
+      dockerStrategy:
+        dockerfilePath: { { .Values.build.native.dockerfilePath } }
   successfulBuildsHistoryLimit: 5
   triggers:
     - type: ConfigChange
