@@ -24,8 +24,6 @@ spec:
     type: Docker
     dockerStrategy:
       dockerfilePath: src/main/docker/Dockerfile.native
-      pullSecret:
-        name: data-analysis-pull-secret
   successfulBuildsHistoryLimit: 5
   triggers:
     - type: ConfigChange
