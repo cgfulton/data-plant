@@ -52,7 +52,7 @@ build:
 
 
   ## Image pull secret. More information: https://docs.openshift.com/container-platform/4.6/openshift_images/managing_images/using-image-pull-secrets.html
-  pullSecret:
+  pullSecret: data-analysis-pull-secret
 
   ## Freeform env for the OCP build. More information: https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/
   env:
