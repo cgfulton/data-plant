@@ -1,5 +1,7 @@
 # Operator Plant
 
+Helm driven installation of OpenShift operators.
+
 ## Operators
 
 ### [Operator Elasticsearch](./operator-elasticsearch)
