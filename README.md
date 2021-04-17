@@ -14,40 +14,40 @@ We believe value is inherently derived through sharing `ideas`, `successes`, and
 
 ## Concepts
 
-* [Data Analysis](./data-analysis) inspects data for useful information and conclusions.
+* [Data Analysis](data-plant/data-analysis) inspects data for useful information and conclusions.
 
 
-* [Data Cleaning](./data-cleaning) fixes or removes incorrect, corrupted, duplicate, or incomplete data.
+* [Data Cleaning](data-plant/data-cleaning) fixes or removes incorrect, corrupted, duplicate, or incomplete data.
 
 
-* [Data Evaluation](./data-evaluation) determines whether data is usable.
+* [Data Evaluation](data-plant/data-evaluation) determines whether data is usable.
 
 
-* [Data Extraction](./data-extraction) retrieves subsets of data for further processing.
+* [Data Extraction](data-plant/data-extraction) retrieves subsets of data for further processing.
 
 
-* [Data Collection](./data-collection) is the gathering and measuring targeted data from one or more sources.
+* [Data Collection](data-plant/data-collection) is the gathering and measuring targeted data from one or more sources.
 
 
-* [Data Metadata](./data-metadata) summarizes information about other data.
+* [Data Metadata](data-plant/data-metadata) summarizes information about other data.
 
 
-* [Data Preparation](./data-preparation) manipulates data into a usable form.
+* [Data Preparation](data-plant/data-preparation) manipulates data into a usable form.
 
 
-* [Data Query](./data-query) answers a question. 
+* [Data Query](data-plant/data-query) answers a question. 
 
 
-* [Data Splitting](./data-splitting) is the partitioning of data.
+* [Data Splitting](data-plant/data-splitting) is the partitioning of data.
 
 
-* [Data Storage](./data-storage) records data for future retrieval.
+* [Data Storage](data-plant/data-storage) records data for future retrieval.
 
 
-* [Data Transformation](./data-transformation) converts one data format to another.
+* [Data Transformation](data-plant/data-transformation) converts one data format to another.
 
 
-* [Data Validation](./data-validation) checks the accuracy and quality of source data.
+* [Data Validation](data-plant/data-validation) checks the accuracy and quality of source data.
 
 ## References
 
