@@ -8,46 +8,48 @@ The Elasticsearch Operator for OCP provides a means for configuring and managing
 
 __Install__
 ```sh
-helm install opertor-elasticsearch opertor-elasticsearch/
+helm install operator-elasticsearch ./operator-elasticsearch/
 ```
 
 __Delete__
 ```sh
-helm delete opertor-elasticsearch
+helm delete operator-elasticsearch
 ```
 
 ### [Operator Jaeger](./operator-jaeger)
 
+Jaeger, inspired by Dapper and OpenZipkin, is a distributed tracing system released as open source by Uber Technologies. It is used for monitoring and troubleshooting microservices-based distributed systems.
+
 __Install__
 ```sh
-helm install opertor-jaeger opertor-jaeger/
+helm install operator-jaeger ./operator-jaeger/
 ```
 
 __Delete__
 ```sh
-helm delete opertor-elasticsearch
+helm delete operator-elasticsearch
 ```
 
 ### [Operator Kiali](./operator-kiali)
 
 __Install__
 ```sh
-helm install opertor-kiali opertor-kiali/
+helm install operator-kiali ./operator-kiali
 ```
 
 __Delete__
 ```sh
-helm delete opertor-kiali
+helm delete operator-kiali
 ```
 
 ### [Operator Maistra](./operator-maistra)
 
 __Install__
 ```sh
-helm install opertor-kiali opertor-maistra/
+helm install operator-kiali ./operator-maistra
 ```
 
 __Delete__
 ```sh
-helm delete opertor-maistra
+helm delete operator-maistra
 ```
