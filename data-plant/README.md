@@ -8,162 +8,29 @@ Data Plant is an opinionated concept-first data centric approach to machine lear
 
 ## Concepts
 
-### [Data Analysis](data-analysis)
-Inspects data for useful information and conclusions.
+* [Data Analysis](data-analysis) inspects data for useful information and conclusions.
 
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
+* [Data Cleaning](data-cleaning) fixes or removes incorrect, corrupted, duplicate, or incomplete data.
 
-__Delete__
-```sh
-helm delete data-analysis
-```
+* [Data Evaluation](data-evaluation) determines whether data is usable.
 
-### [Data Cleaning](data-cleaning)
-Fixes or removes incorrect, corrupted, duplicate, or incomplete data.
+* [Data Extraction](data-extraction) retrieves subsets of data for further processing.
 
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
+* [Data Collection](data-collection) gathers and measures targeted data from one or more sources.
 
-__Delete__
-```sh
-helm delete data-analysis
-```
+* [Data Metadata](data-metadata) summarizes information about other data.
 
-### [Data Evaluation](data-evaluation)
-Determines whether data is usable.
+* [Data Preparation](data-preparation) manipulates data into a usable form.
 
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
+* [Data Query](data-query) answers a question. 
 
-__Delete__
-```sh
-helm delete data-analysis
-```
+* [Data Splitting](data-splitting) partitioning of data.
+ 
+* [Data Storage](data-storage) records data for future retrieval.
 
-### [Data Extraction](data-extraction)
-Retrieves subsets of data for further processing.
+* [Data Transformation](data-transformation) converts one data format to another. 
 
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
-
-### [Data Collection](data-collection) 
-Gathers and measures targeted data from one or more sources.
-
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
-
-### [Data Metadata](data-metadata) 
-Summarizes information about other data.
-
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
-
-### [Data Preparation](data-preparation) 
-Manipulates data into a usable form.
-
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
-
-### [Data Query](data-query) 
-Answers a question. 
-
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
-
-### [Data Splitting](data-splitting) 
-Partitioning of data.
-
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
-
-### [Data Storage](data-storage)
-
-Records data for future retrieval.
-
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
-
-### [Data Transformation](data-transformation) 
-Converts one data format to another.
-
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
-
-### [Data Validation](data-validation)
-Checks the accuracy and quality of data.
-
-__Install__
-```sh
-helm install data-analysis ./data-analysis
-```
-
-__Delete__
-```sh
-helm delete data-analysis
-```
+* [Data Validation](data-validation) checks the accuracy and quality of data.
 
 ## References
 
