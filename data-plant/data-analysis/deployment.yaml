@@ -1,9 +1,4 @@
 ---
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: data-analysis
----
 apiVersion: v1
 kind: Service
 metadata:
