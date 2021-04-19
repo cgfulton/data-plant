@@ -47,7 +47,43 @@ spec:
       serviceAccountName: data-analysis
       containers:
         - name: data-analysis
-          image: quay.io/gfulton/data-analysis:latest
+          image: data-analysis:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
+---
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: data-analysis
+    version: v1
+  name: data-analysis
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: data-analysis:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    contextDir: data-plant/data-analysis
+    git:
+      uri: https://github.com/cgfulton/mlops-quarkus.git
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: ubi-quarkus-native-s2i:19.3.1-java11
+    type: Source
+  successfulBuildsHistoryLimit: 5
+  triggers:
+  - type: ConfigChange
+  - imageChange:
+      lastTriggeredImageID: quay.io/quarkus/ubi-quarkus-native-s2i@sha256:bd3f1ab39c9401fe0f6811007f2723e032b85bfca028c0484bbe0c95f68ec250
+    type: ImageChange
+
