@@ -63,7 +63,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /data-analysing
+          - path: /data-analysis
             backend:
               serviceName: data-plant
               servicePort: 8080

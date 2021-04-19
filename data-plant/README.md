@@ -8,7 +8,7 @@ data-plant is an opinionated concept-first data centric approach to machine lear
 
 ## Concepts
 
-* [data-analysing](./data-analysing) inspects data for useful information and conclusions.
+* [data-analysis](data-analysis) inspects data for useful information and conclusions.
 
 * [data-cleaning](./data-cleaning) fixes or removes incorrect, corrupted, duplicate, or incomplete data.
 

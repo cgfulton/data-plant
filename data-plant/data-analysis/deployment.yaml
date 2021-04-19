@@ -2,53 +2,52 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: data-analysing
+  name: data-analysis
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: data-analysing
+  name: data-analysis
   labels:
-    app: data-analysing
-    service: data-analysing
+    app: data-analysis
+    service: data-analysis
 spec:
   ports:
     - port: 8080
       name: http
   selector:
-    app: data-analysing
+    app: data-analysis
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: data-analysing
+  name: data-analysis
   labels:
-    account: data-analysing
+    account: data-analysis
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: data-analysing
+  name: data-analysis
   labels:
-    app: data-analysing
+    app: data-analysis
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: data-analysing
+      app: data-analysis
       version: v1
   template:
     metadata:
       labels:
-        app: data-analysing
+        app: data-analysis
         version: v1
     spec:
-      serviceAccountName: data-analysing
+      serviceAccountName: data-analysis
       containers:
-        - name: data-analysing
-          image: quay.io/gfulton/data-analysing:latest
+        - name: data-analysis
+          image: quay.io/gfulton/data-analysis:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
----
