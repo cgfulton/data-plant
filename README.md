@@ -1,4 +1,5 @@
 # mlops-plant
 
-* [Operator Plant](./operator-plant)
-* [Data Plant](./data-plant)
+* [operator-plant](./operator-plant)
+
+* [data-plant](./data-plant)
