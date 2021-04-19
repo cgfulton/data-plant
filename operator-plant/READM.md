@@ -13,4 +13,4 @@ Jaeger, inspired by Dapper and OpenZipkin, is a distributed tracing system relea
 ### [Operator Kiali](./operator-kiali)
 
   
-### [Operator Maistra](./operator-maistra)
+### [Operator Maistra](operator-service-mesh)
