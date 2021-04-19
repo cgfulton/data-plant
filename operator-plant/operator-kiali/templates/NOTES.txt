@@ -1,2 +1,0 @@
-Installing Kiali
-https://maistra.io/docs/installing-ossm.html#ossm-install-kiali_installing-ossm

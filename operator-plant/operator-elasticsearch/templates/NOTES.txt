@@ -1,3 +1,0 @@
-Installing the Elasticsearch Operator
-https://maistra.io/docs/installing-ossm.html#jaeger-operator-install-elasticsearch_installing-ossm
-

@@ -1,2 +1,0 @@
-Installing the Jaeger Operator
-https://maistra.io/docs/installing-ossm.html#jaeger-operator-install_installing-ossm
