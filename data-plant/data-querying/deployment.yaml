@@ -1,0 +1,54 @@
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: data-querying
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-querying
+  labels:
+    app: data-querying
+    service: data-querying
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: data-querying
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: data-querying
+  labels:
+    account: data-querying
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-querying
+  labels:
+    app: data-querying
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-querying
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: data-querying
+        version: v1
+    spec:
+      serviceAccountName: data-querying
+      containers:
+        - name: data-querying
+          image: quay.io/gfulton/data-querying:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+---

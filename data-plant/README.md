@@ -8,29 +8,29 @@ data-plant is an opinionated concept-first data centric approach to machine lear
 
 ## Concepts
 
-* [data-analysis](./data-analysis) inspects data for useful information and conclusions.
+* [data-analysing](./data-analysing) inspects data for useful information and conclusions.
 
 * [data-cleaning](./data-cleaning) fixes or removes incorrect, corrupted, duplicate, or incomplete data.
 
-* [data-evaluation](./data-evaluation) determines whether data is usable.
+* [data-evaluating](./data-evaluating) determines whether data is usable.
 
-* [data-extraction](./data-extraction) retrieves subsets of data for further processing.
+* [data-extracting](./data-extracting) retrieves subsets of data for further processing.
 
-* [data-collection](./data-collection) gathers and measures targeted data from one or more sources.
+* [data-plant](./data-plant) ingests targeted data from one or more sources.
 
-* [data-metadata](./data-metadata) summarizes information about other data.
+* [data-labeling](./data-labeling) summarizes and tagging information about data.
 
-* [data-preparation](./data-preparation) manipulates data into a usable form.
+* [data-preparing](./data-preparing) manipulates data into a usable form.
 
-* [data-query](./data-query) answers a question. 
+* [data-querying](./data-querying) answers a question. 
 
 * [data-splitting](./data-splitting) partitioning of data.
  
-* [data-storage](./data-storage) records data for future retrieval.
+* [data-storing](./data-storing) records data for future retrieval.
 
-* [data-transformation](./data-transformation) converts one data format to another. 
+* [data-transforming](./data-tranforming) converts one data format to another. 
 
-* [data-validation](./data-validation) checks the accuracy and quality of data.
+* [data-validating](./data-validating) checks the accuracy and quality of data.
 
 ## References
 

@@ -1,0 +1,54 @@
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: data-evaluating
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-evaluating
+  labels:
+    app: data-evaluating
+    service: data-evaluating
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: data-evaluating
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: data-evaluating
+  labels:
+    account: data-evaluating
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-evaluating
+  labels:
+    app: data-evaluating
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-evaluating
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: data-evaluating
+        version: v1
+    spec:
+      serviceAccountName: data-evaluating
+      containers:
+        - name: data-evaluating
+          image: quay.io/gfulton/data-evaluating:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+---

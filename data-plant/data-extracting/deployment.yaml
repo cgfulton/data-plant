@@ -1,0 +1,54 @@
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: data-extracting
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-extracting
+  labels:
+    app: data-extracting
+    service: data-extracting
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: data-extracting
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: data-extracting
+  labels:
+    account: data-extracting
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-extracting
+  labels:
+    app: data-extracting
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-extracting
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: data-extracting
+        version: v1
+    spec:
+      serviceAccountName: data-extracting
+      containers:
+        - name: data-extracting
+          image: quay.io/gfulton/data-extracting:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+---

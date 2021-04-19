@@ -1,0 +1,54 @@
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: data-validating
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-validating
+  labels:
+    app: data-validating
+    service: data-validating
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: data-validating
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: data-validating
+  labels:
+    account: data-validating
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-validating
+  labels:
+    app: data-validating
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-validating
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: data-validating
+        version: v1
+    spec:
+      serviceAccountName: data-validating
+      containers:
+        - name: data-validating
+          image: quay.io/gfulton/data-validating:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+---

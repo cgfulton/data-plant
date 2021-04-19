@@ -2,53 +2,53 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: data-analysis
+  name: data-labeling
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: data-analysis
+  name: data-labeling
   labels:
-    app: data-analysis
-    service: data-analysis
+    app: data-labeling
+    service: data-labeling
 spec:
   ports:
-    - port: 80
+    - port: 8080
       name: http
   selector:
-    app: data-analysis
+    app: data-labeling
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: data-analysis
+  name: data-labeling
   labels:
-    account: data-analysis
+    account: data-labeling
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: data-analysis
+  name: data-labeling
   labels:
-    app: data-analysis
+    app: data-labeling
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: data-analysis
+      app: data-labeling
       version: v1
   template:
     metadata:
       labels:
-        app: data-analysis
+        app: data-labeling
         version: v1
     spec:
-      serviceAccountName: data-analysis
+      serviceAccountName: data-labeling
       containers:
-        - name: data-analysis
-          image: yeasy/simple-web:latest
+        - name: data-labeling
+          image: quay.io/gfulton/data-labeling:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 8080
 ---

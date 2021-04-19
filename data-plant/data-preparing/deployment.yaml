@@ -1,0 +1,54 @@
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: data-preparing
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-preparing
+  labels:
+    app: data-preparing
+    service: data-preparing
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: data-preparing
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: data-preparing
+  labels:
+    account: data-preparing
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-preparing
+  labels:
+    app: data-preparing
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-preparing
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: data-preparing
+        version: v1
+    spec:
+      serviceAccountName: data-preparing
+      containers:
+        - name: data-preparing
+          image: quay.io/gfulton/data-preparing:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+---
