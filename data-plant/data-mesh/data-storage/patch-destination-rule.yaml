@@ -1,0 +1,9 @@
+- op: replace
+  path: /metadata/name
+  value: data-storage
+- op: replace
+  path: /metadata/namespace
+  value: data-clean
+- op: replace
+  path: /spec/host
+  value: data-clean

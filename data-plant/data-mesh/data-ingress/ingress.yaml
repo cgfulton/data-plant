@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: data-ingress
+  namespace: data-ingress
   annotations:
     kubernetes.io/ingress.class: "istio"
 spec:
@@ -17,7 +18,6 @@ spec:
               serviceName: data-ingress
               servicePort: 8080
           - path: /data-collect
-
             backend:
               serviceName: data-ingress
               servicePort: 8080
