@@ -2,35 +2,15 @@
 
 ## Overview
 
-data-plant is an opinionated concept-first data centric approach to machine learning operations.
+data-plant is an opinionated concept-first approach to machine learning operations.
 
 > "**Implementation is solely a means to an ends**."
 
 ## Concepts
 
-* [data-analysis](data-analysis) inspects data for useful information and conclusions.
+* [data-mesh](data-mesh) service-mesh for data processing.
 
-* [data-clean](data-clean) fixes or removes incorrect, corrupted, duplicate, or incomplete data.
-
-* [data-evaluate](data-evaluate) determines whether data is usable.
-
-* [data-extracting](data-extract) retrieves subsets of data for further processing.
-
-* [data-plant](./data-plant) ingests targeted data from one or more sources.
-
-* [data-label](data-label) summarizes and tagging information about data.
-
-* [data-preparing](data-prepare) manipulates data into a usable form.
-
-* [data-query](data-query) answers a question. 
-
-* [data-split](data-split) partitioning of data.
- 
-* [data-storing](data-store) records data for future retrieval.
-
-* [data-transforming](./data-tranforming) converts one data format to another. 
-
-* [data-validating](data-validate) checks the accuracy and quality of data.
+* [data-java](data-java) java based service implementations.
 
 ## References
 
