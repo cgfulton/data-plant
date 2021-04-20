@@ -8,18 +8,18 @@
   <packaging>pom</packaging>
   <modules>
     <module>data-analysis</module>
-<!--    <module>data-metadata</module>-->
-<!--    <module>data-split</module>-->
-<!--    <module>data-query</module>-->
-<!--    <module>data-clean</module>-->
-<!--    <module>data-collect</module>-->
-<!--    <module>data-evaluate</module>-->
-<!--    <module>data-extract</module>-->
-<!--    <module>data-ingress</module>-->
-<!--    <module>data-prepare</module>-->
-<!--    <module>data-validate</module>-->
-<!--    <module>data-transform</module>-->
-<!--    <module>data-storage</module>-->
+    <module>data-metadata</module>
+    <module>data-split</module>
+    <module>data-query</module>
+    <module>data-clean</module>
+    <module>data-collect</module>
+    <module>data-evaluate</module>
+    <module>data-extract</module>
+    <module>data-ingress</module>
+    <module>data-prepare</module>
+    <module>data-validate</module>
+    <module>data-transform</module>
+    <module>data-storage</module>
   </modules>
   <properties>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
