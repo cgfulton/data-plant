@@ -1,4 +1,9 @@
 ---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: data-analysis
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -20,65 +25,84 @@ metadata:
   labels:
     account: data-analysis
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
 metadata:
-  name: data-analysis
+  annotations:
+    app.openshift.io/vcs-url: https://github.com/cgfulton/mlops-quarkus.git
+    app.quarkus.io/vcs-url: https://github.com/cgfulton/mlops-quarkus.git
   labels:
-    app: data-analysis
-    version: v1
+    app.kubernetes.io/name: data-analysis
+    app.kubernetes.io/version: 1.0.0-SNAPSHOT
+    app.openshift.io/runtime: quarkus
+  name: data-analysis
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      app: data-analysis
-      version: v1
+    app.kubernetes.io/name: data-analysis
+    app.kubernetes.io/version: 1.0.0-SNAPSHOT
+    app.openshift.io/runtime: quarkus
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Rolling
   template:
     metadata:
+      annotations:
+        app.openshift.io/vcs-url: https://github.com/cgfulton/mlops-quarkus.git
+        app.quarkus.io/vcs-url: https://github.com/cgfulton/mlops-quarkus.git
+      creationTimestamp: null
       labels:
-        app: data-analysis
-        version: v1
+        app.kubernetes.io/name: data-analysis
+        app.openshift.io/runtime: quarkus
+        app.kubernetes.io/version: 1.0.0-SNAPSHOT
+      namespace: data-analysis
     spec:
-      serviceAccountName: data-analysis
       containers:
-        - name: data-analysis
-          image: data-analysis:latest
+        - args:
+            - -Dquarkus.http.host=0.0.0.0
+            - -Djava.util.logging.manager=org.jboss.logmanager.LogManager
+            - -jar
+            - /deployments/quarkus-run.jar
+          command:
+            - java
+          env:
+            - name: KUBERNETES_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: JAVA_APP_JAR
+              value: /deployments/quarkus-run.jar
+          image: image-registry.openshift-image-registry.svc:5000/data-analysis/data-analysis:1.0.0-SNAPSHOT
           imagePullPolicy: IfNotPresent
+          name: data-analysis
           ports:
             - containerPort: 8080
----
-apiVersion: build.openshift.io/v1
-kind: BuildConfig
-metadata:
-  labels:
-    app: data-analysis
-    version: v1
-  name: data-analysis
-spec:
-  failedBuildsHistoryLimit: 5
-  nodeSelector: null
-  output:
-    to:
-      kind: ImageStreamTag
-      name: data-analysis:latest
-  postCommit: {}
-  resources: {}
-  runPolicy: Serial
-  source:
-    contextDir: data-plant/data-analysis
-    git:
-      uri: https://github.com/cgfulton/mlops-quarkus.git
-    type: Git
-  strategy:
-    sourceStrategy:
-      from:
-        kind: ImageStreamTag
-        name: ubi-quarkus-native-s2i:19.3.1-java11
-    type: Source
-  successfulBuildsHistoryLimit: 5
+              name: http
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
   triggers:
-  - type: ConfigChange
-  - imageChange:
-      lastTriggeredImageID: quay.io/quarkus/ubi-quarkus-native-s2i@sha256:bd3f1ab39c9401fe0f6811007f2723e032b85bfca028c0484bbe0c95f68ec250
-    type: ImageChange
-
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+          - data-analysis
+        from:
+          kind: ImageStreamTag
+          name: data-analysis:1.0.0-SNAPSHOT
+          namespace: data-analysis
+      type: ImageChange
