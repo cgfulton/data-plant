@@ -10,27 +10,27 @@ data-plant is an opinionated concept-first data centric approach to machine lear
 
 * [data-analysis](data-analysis) inspects data for useful information and conclusions.
 
-* [data-cleaning](./data-cleaning) fixes or removes incorrect, corrupted, duplicate, or incomplete data.
+* [data-clean](data-clean) fixes or removes incorrect, corrupted, duplicate, or incomplete data.
 
-* [data-evaluating](./data-evaluating) determines whether data is usable.
+* [data-evaluate](data-evaluate) determines whether data is usable.
 
-* [data-extracting](./data-extracting) retrieves subsets of data for further processing.
+* [data-extracting](data-extract) retrieves subsets of data for further processing.
 
 * [data-plant](./data-plant) ingests targeted data from one or more sources.
 
-* [data-labeling](./data-labeling) summarizes and tagging information about data.
+* [data-label](data-label) summarizes and tagging information about data.
 
-* [data-preparing](./data-preparing) manipulates data into a usable form.
+* [data-preparing](data-prepare) manipulates data into a usable form.
 
-* [data-querying](./data-querying) answers a question. 
+* [data-query](data-query) answers a question. 
 
-* [data-splitting](./data-splitting) partitioning of data.
+* [data-split](data-split) partitioning of data.
  
-* [data-storing](./data-storing) records data for future retrieval.
+* [data-storing](data-store) records data for future retrieval.
 
 * [data-transforming](./data-tranforming) converts one data format to another. 
 
-* [data-validating](./data-validating) checks the accuracy and quality of data.
+* [data-validating](data-validate) checks the accuracy and quality of data.
 
 ## References
 

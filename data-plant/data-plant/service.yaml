@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-plant
+  namespace: data-plant
+  labels:
+    app: data-plant
+    service: data-plant
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: data-plant
+

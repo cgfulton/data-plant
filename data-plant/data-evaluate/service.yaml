@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-evaluate
+  namespace: data-evaluate
+  labels:
+    app: data-evaluate
+    service: data-evaluate
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: data-evaluate
+

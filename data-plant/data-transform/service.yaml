@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-transform
+  namespace: data-transform
+  labels:
+    app: data-transform
+    service: data-transform
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: data-transform
+
