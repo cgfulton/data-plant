@@ -1,4 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
-  - data-mesh
+  - overlays/data-analysis
+  - overlays/data-clean
+  - overlays/data-collect
+  - overlays/data-evaluate
+  - overlays/data-metadata
+  - overlays/data-prepare
+  - overlays/data-query
+  - overlays/data-split
+  - overlays/data-storage
+  - overlays/data-transform
+  - overlays/data-validate
+
+
