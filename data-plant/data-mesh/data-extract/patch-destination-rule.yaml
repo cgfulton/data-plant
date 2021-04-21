@@ -2,8 +2,5 @@
   path: /metadata/name
   value: data-extract
 - op: replace
-  path: /metadata/namespace
-  value: data-extract
-- op: replace
   path: /spec/host
   value: data-extract

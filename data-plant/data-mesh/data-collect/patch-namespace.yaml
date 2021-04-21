@@ -1,6 +1,0 @@
-- op: replace
-  path: /metadata/name
-  value: data-collect
-- op: replace
-  path: /metadata/namespace
-  value: data-collect
