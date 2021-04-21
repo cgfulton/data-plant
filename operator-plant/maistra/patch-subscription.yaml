@@ -1,0 +1,22 @@
+- op: replace
+  path: /metadata/name
+  value: maistraoperator
+- op: replace
+  path: /metadata/namespace
+  value: openshift-operators
+- op: replace
+  path: /spec/channel
+  value: stable
+- op: replace
+  path: /spec/installPlanApproval
+  value: Automaitc
+- op: replace
+  path: /spec/name
+  value: maistraoperator
+- op: replace
+  path: /spec/source
+  value: community-operators
+- op: replace
+  path: /spec/sourceNamespace
+  value: openshift-marketplace
+

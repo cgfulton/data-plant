@@ -5,7 +5,7 @@ bases:
 resources:
   - ingress.yaml
 patches:
-  - path: patch-service-account.yaml
+  - path: patch-subscription.yaml
     target:
       kind: ServiceAccount
   - path: patch-destination-rule.yaml
