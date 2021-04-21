@@ -25,7 +25,7 @@ kustomize build operator-plant | oc apply -f-
 ## [control-plant](./control-plant)
 Maistra control plane.
 
-Install:
+### Install
 ```sh 
 kustomize build control-plant | oc apply -f-
 ```
@@ -67,7 +67,6 @@ kustomize build control-plant | oc apply -f-
 
 `data-split` partitioning of data.
 
-
 [data-storage](./data-plant/overlays/data-storage)
 
 `data-storage` records data for future retrieval.
@@ -79,6 +78,11 @@ kustomize build control-plant | oc apply -f-
 [data-validate](./data-plant/overlays/data-validate)
 
 `data-validate` checks the accuracy and quality of data.
+
+### Install
+```sh 
+kustomize build data-plant | oc apply -f-
+```
 
 ## [java-plant](java-plant)
 Java based service implementations.
