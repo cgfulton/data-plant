@@ -2,6 +2,6 @@
 
 ## Concepts 
 
-* [operator-plant](./operator-plant)
+* [operator-plant](operator-plant)
 
-* [data-plant](./data-plant)
+* [data-plant](data-plant)
