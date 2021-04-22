@@ -1,0 +1,20 @@
+apiVersion: maistra.io/v1
+kind: ServiceMeshMemberRoll
+metadata:
+  name: patch-metadata-name
+  namespace: patch-metadata-namespace
+spec:
+  members:
+    - data-analysis
+    - data-collect
+    - data-extract
+    - data-metadata
+    - data-query
+    - data-storage
+    - data-validate
+    - data-clean
+    - data-evaluate
+    - data-ingress
+    - data-prepare
+    - data-split
+    - data-transform

@@ -3,5 +3,6 @@ kind: Kustomization
 commonLabels:
   version: 1.0.0
 resources:
+  - namespace.yaml
   - service-account.yaml
   - destination-rule.yaml

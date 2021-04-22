@@ -1,0 +1,6 @@
+- op: replace
+  path: /metadata/name
+  value: default
+- op: replace
+  path: /metadata/namespace
+  value: istio-system

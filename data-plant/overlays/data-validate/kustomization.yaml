@@ -3,6 +3,9 @@ kind: Kustomization
 bases:
   - ../../bases
 patches:
+  - path: patch-namespace.yaml
+    target:
+      kind: Namespace
   - path: patch-service-account.yaml
     target:
       kind: ServiceAccount

@@ -4,3 +4,6 @@
 - op: replace
   path: /spec/host
   value: data-validate
+- op: replace
+  path: /metadata/namespace
+  value: data-validate

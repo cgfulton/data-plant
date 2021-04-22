@@ -6,3 +6,12 @@ patches:
   - path: patch-namespace.yaml
     target:
       kind: Namespace
+  - path: patch-service-mesh-control-plane.yaml
+    target:
+      kind: ServiceMeshControlPlane
+  - path: patch-service-mesh-member-roll.yaml
+    target:
+      kind: ServiceMeshMemberRoll
+  - path: patch-service-mesh-member.yaml
+    target:
+      kind: ServiceMeshMember

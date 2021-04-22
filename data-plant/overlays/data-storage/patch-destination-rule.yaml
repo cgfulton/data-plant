@@ -3,4 +3,7 @@
   value: data-storage
 - op: replace
   path: /spec/host
-  value: data-clean
+  value: data-storage
+- op: replace
+  path: /metadata/namespace
+  value: data-storage

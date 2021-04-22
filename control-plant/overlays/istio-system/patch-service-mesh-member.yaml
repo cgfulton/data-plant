@@ -1,0 +1,12 @@
+- op: replace
+  path: /metadata/name
+  value: default
+- op: replace
+  path: /metadata/namespace
+  value: istio-system
+- op: replace
+  path: /spec/controlPlaneRef/namespace
+  value: istio-system
+- op: replace
+  path: /spec/controlPlaneRef/name
+  value: minimal-install

@@ -1,7 +1,11 @@
 # mlops-plant
 
+```shell
+git clone 
+```
+
 ## [operator-plant](./operator-plant)
-Opinionated approach to installing and running of OpenShift operators.
+OpenShift operators.
 
 ### Operators
 
@@ -15,22 +19,37 @@ Jaeger, inspired by Dapper and OpenZipkin, is a distributed tracing system relea
 
 [Kiali](./operator-plant/overlays/kiali)
 
+Kiali is a management console for Istio-based service mesh. It provides dashboards, observability and lets you to operate your mesh with robust configuration and validation capabilities.
+
 [Maistra](service-mesh/overlays/operator-maistra)
 
+Maistra is a platform that provides behavioral insight and operational control over a service mesh, providing a uniform way to connect, secure, and monitor microservice applications.
+
 #### Install
+
+Execute the following command to install the operators:
 ```sh 
 kustomize build operator-plant | oc apply -f-
 ```
 
 ## [control-plant](./control-plant)
+
 Maistra control plane.
 
 ### Install
+
+Execute the following command to install the control plane:
 ```sh 
 kustomize build control-plant | oc apply -f-
 ```
 
+Execute the following command to see the status:
+```sh
+oc get smcp -n istio-system
+```
+
 ## data-plant
+
 [data-analysis](./data-plant/overlays/data-analysis)
 
 `data-analysis` inspects data for useful information and conclusions.
@@ -80,17 +99,34 @@ kustomize build control-plant | oc apply -f-
 `data-validate` checks the accuracy and quality of data.
 
 ### Install
+
+Execute the following command to install the `data-plant`:
 ```sh 
 kustomize build data-plant | oc apply -f-
 ```
 
 ## [java-plant](java-plant)
+
 Java based service implementations.
 
 ### Install
 
+
 ```sh 
-mvn clean package -f data-plant/java-impl/pom.xml
+oc project data-analysis
+```
+
+Build the image on OpenShift:
+```sh
+oc new-app https://github.com/cgfulton/mlops-plant.git#main \
+           --image-stream=quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 \
+           --strategy=source --context-dir=data-plant/data-analysis \
+           --name=data-analysis \ 
+           --build-env='MAVEN_ARGS=-e -Dquarkus.native.native-image-xmx=6g'
+```
+
+```sh           
+oc expose svc/data-analysis
 ```
 
 ## References

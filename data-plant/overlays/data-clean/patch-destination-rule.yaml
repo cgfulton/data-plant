@@ -4,3 +4,6 @@
 - op: replace
   path: /spec/host
   value: data-clean
+- op: replace
+  path: /metadata/namespace
+  value: data-clean
