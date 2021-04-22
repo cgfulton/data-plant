@@ -119,10 +119,9 @@ oc project data-analysis
 Build the image on OpenShift:
 ```sh
 oc new-app https://github.com/cgfulton/mlops-plant.git#main \
-           --image-stream=quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 \
+           --docker-image=quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 \
            --strategy=source --context-dir=data-plant-java/data-analysis \
-           --name=data-analysis \ 
-           --build-env='MAVEN_ARGS=-e -Dquarkus.native.native-image-xmx=6g'
+           --name=data-analysis --build-env='MAVEN_ARGS=-e -Dquarkus.native.native-image-xmx=6g'
 ```
 
 ```sh           
