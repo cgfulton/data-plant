@@ -123,7 +123,20 @@ oc new-app https://github.com/cgfulton/mlops-plant.git#main \
            --strategy=source --context-dir=data-plant-java/data-analysis \
            --labels='app=data-analysis,version=v1' \
            --output-version='1.0.0' \
-           --name=data-analysis --build-env='MAVEN_ARGS=-e -Dquarkus.native.native-image-xmx=1g'
+           --name=data-analysis 
+```
+
+Patch the BuildConfig because GraalVM-based native build are more memory & CPU intensive.
+```sh
+oc patch bc/data-analysis  -p '{"spec":{"resources":{"limits":{"cpu":"4", "memory":"4Gi"}}}}'
+```
+
+```sh 
+oc start-build data-analysis
+```
+
+```sh 
+oc logs -f bc/data-analysis
 ```
 
 ```sh           
