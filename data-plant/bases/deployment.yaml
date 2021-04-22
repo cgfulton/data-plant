@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+# oc set triggers deploy/data-analysis --from-image=data-analysis:latest -c data-analysis
+  labels:
+    app: patch-metadata-labels-app
+    version: patch-metadata-labels-version
+  name: patch-metadata-name
+  namespace: patch-metadata-namespace
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: data-analysis
+      deployment: data-analysis
+      version: v1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: patch-spec-template-metadata-labels-app
+        deployment: patch-spec-template-metadata-labels-deployment
+        version: patch-spec-template-metadata-labels-version
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/quarkus/data-analysis@sha256:d06fb3cfce50328f21da29b7e1baae6d81417dba5f54a90929f6a22d01625cf1
+        imagePullPolicy: IfNotPresent
+        name: patch-spec-template-spec-containers-0-name
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+
