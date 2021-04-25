@@ -5,6 +5,7 @@ bases:
   - overlays/data-clean
   - overlays/data-collect
   - overlays/data-evaluate
+  - overlays/data-extract
   - overlays/data-metadata
   - overlays/data-prepare
   - overlays/data-query
@@ -12,5 +13,3 @@ bases:
   - overlays/data-storage
   - overlays/data-transform
   - overlays/data-validate
-
-
