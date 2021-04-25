@@ -1,12 +1,18 @@
 - op: replace
-  path: /metadata/name
-  value: data-validate
-- op: replace
   path: /metadata/labels/account
   value: data-validate
 - op: replace
   path: /metadata/labels/app
   value: data-validate
 - op: replace
+  path: /metadata/labels/version
+  value: v1
+- op: replace
+  path: /metadata/name
+  value: data-validate
+- op: replace
   path: /metadata/namespace
+  value: data-validate
+- op: replace
+  path: /spec/to/name
   value: data-validate

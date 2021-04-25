@@ -12,3 +12,6 @@ patches:
   - path: patch-destination-rule.yaml
     target:
       kind: DestinationRule
+  - path: patch-route.yaml
+    target:
+      kind: Route
