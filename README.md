@@ -5,7 +5,6 @@ git clone
 ```
 
 ## [operator-plant](./operator-plant)
-OpenShift operators.
 
 ### Operators
 
@@ -111,19 +110,25 @@ Java based service implementations.
 
 ### Install
 
-
 ```sh 
-oc project data-analysis
+oc new-project <project-name>
+```
+
+Create ImageStreamTag for `ubi-quarkus-native-s2i`:
+```sh
+oc tag quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 ubi-quarkus-native-s2i:20.3.1-java11 -n <project>
 ```
 
 Build the image on OpenShift:
 ```sh
-oc new-app https://github.com/cgfulton/mlops-plant.git#main \
+oc new-app --code=https://github.com/cgfulton/mlops-plant.git#main \
            --docker-image=quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 \
-           --strategy=source --context-dir=data-plant-java/data-analysis \
+           --strategy=source \
+           --context-dir=data-plant-java/data-analysis \
            --labels='app=data-analysis,version=v1' \
            --output-version='1.0.0' \
-           --name=data-analysis 
+           --name=data-analysis \
+           --namespace=data-analysis
 ```
 
 Patch the BuildConfig because GraalVM-based native build are more memory & CPU intensive.
@@ -140,7 +145,7 @@ oc logs -f bc/data-analysis
 ```
 
 ```sh           
-oc expose svc/data-analysis
+oc expose svc/data-analysis -l app=data-analysis version=v1
 ```
 
 ## References

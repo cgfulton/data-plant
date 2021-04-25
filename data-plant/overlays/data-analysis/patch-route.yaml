@@ -14,11 +14,5 @@
   path: /metadata/namespace
   value: data-analysis
 - op: replace
-  path: /spec/selector/app
+  path: /spec/to/name
   value: data-analysis
-- op: replace
-  path: /spec/selector/deployment
-  value: data-analysis
-- op: replace
-  path: /spec/selector/version
-  value: v1
