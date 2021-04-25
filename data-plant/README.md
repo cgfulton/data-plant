@@ -1,10 +1,12 @@
 # data-plant
 
+Provides a service mesh overlay for data functionality.
+
 ## Assumptions
 
+```sh 
 export OVERLAYS_URL=https://github.com/cgfulton/mlops-plant.git/data-plant/overlays
-
-Provides a service mesh overlay for data functionality.
+```
 
 [data-analysis](./data-plant/overlays/data-analysis)
 
