@@ -14,5 +14,17 @@ kustomize build https://github.com/cgfulton/mlops-plant.git/data-plant-java?ref=
 
 Build the java applications:
 ```sh 
-oc start-build data-analysis
+oc start-build data-analysis --follow --wait
+data-clean
+data-collect    
+data-extract    
+
+data-evaluate   
+data-metadata
+data-prepare    
+data-split 
+data-storage      
+data-transform   
+data-query      
+data-validate
 ```
