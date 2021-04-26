@@ -5,3 +5,5 @@ resources:
   - service-account.yaml
   - destination-rule.yaml
   - route.yaml
+  - deployment.yaml
+  - service.yaml

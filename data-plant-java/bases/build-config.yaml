@@ -1,0 +1,38 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  generation: 4
+  labels:
+    app: patch-metadata-labels-app
+    version: patch-metadata-labels-version
+    account: patch-metadata-labels-account
+  name: patch-metadata-name
+  namespace: patch-metadata-namespace
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: patch-spec-output-to-name
+  postCommit: {}
+  resources:
+    limits:
+      cpu: "4"
+      memory: 4Gi
+  runPolicy: Serial
+  source:
+    contextDir: getting-started
+    git:
+      ref: main
+      uri: https://github.com/quarkusio/quarkus-quickstarts.git
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: ubi-quarkus-native-s2i:20.3.1-java11
+    type: Source
+  successfulBuildsHistoryLimit: 5
+
+

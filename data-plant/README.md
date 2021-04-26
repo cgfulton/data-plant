@@ -2,13 +2,6 @@
 
 Provides a service mesh overlay for data functionality.
 
-## Assumptions
-
-- OpenShift 4.x cluster using an account with cluster-admin permissions.
-
-
-- `oc` command is installed on your local system.
-
 ## Components
 
 ### [data-analysis](./data-plant/overlays/data-analysis)
@@ -58,5 +51,5 @@ Provides a service mesh overlay for data functionality.
 ## Install
 
 ```sh 
-kustomize build https://github.com/cgfulton/mlops-plant.git/data-plant?ref=main | oc apply -f-
+kustomize build data-plant | oc apply -f-
 ```

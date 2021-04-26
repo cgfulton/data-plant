@@ -15,3 +15,9 @@ patches:
   - path: patch-route.yaml
     target:
       kind: Route
+  - path: patch-deployment.yaml
+    target:
+      kind: Deployment
+  - path: patch-service.yaml
+    target:
+      kind: Service

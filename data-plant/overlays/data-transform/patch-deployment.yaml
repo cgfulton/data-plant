@@ -1,0 +1,43 @@
+- op: replace
+  path: /metadata/name
+  value: data-transform
+- op: replace
+  path: /metadata/namespace
+  value: data-transform
+- op: replace
+  path: /metadata/labels/account
+  value: data-transform
+- op: replace
+  path: /metadata/labels/app
+  value: data-transform
+- op: replace
+  path: /metadata/labels/version
+  value: v1
+- op: replace
+  path: /spec/replicas
+  value: 1
+- op: replace
+  path: /spec/selector/matchLabels/app
+  value: data-transform
+- op: replace
+  path: /spec/selector/matchLabels/version
+  value: v1
+- op: replace
+  path: /spec/template/metadata/labels/app
+  value: data-transform
+- op: replace
+  path: /spec/template/metadata/labels/version
+  value: v1
+- op: replace
+  path: /spec/template/spec/serviceAccountName
+  value: data-transform
+- op: replace
+  path: /spec/template/spec/containers/0/name
+  value: data-transform
+- op: replace
+  path: /spec/template/spec/containers/0/image
+  value: "data-transform:latest"
+
+
+
+
