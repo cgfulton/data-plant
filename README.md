@@ -1,6 +1,5 @@
 # mlops-plant
 
-## [operator-plant](./operator-plant) 
 Installs project dependencies.
 
 ## [control-plant](./control-plant) 

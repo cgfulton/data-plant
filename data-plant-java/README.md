@@ -1,17 +1,18 @@
 # data-plant-java
 
-## Create ImageStreamTag
+## Install 
+
 Create ImageStreamTag for the `ubi-quarkus-native-s2i` image in the `openshift` namespace:
 ```sh
 oc tag quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 ubi-quarkus-native-s2i:20.3.1-java11 -n openshift
 ```
 
-Build deploy the java applications:
+Deploy the BuildConfig objects:
 ```sh 
 kustomize build . | oc apply -f-
 ```
 
-
+Build the java applications:
 ```sh 
 oc start-build data-analysis
 ```
