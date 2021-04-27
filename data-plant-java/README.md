@@ -18,6 +18,7 @@ oc tag quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 ubi-quarkus-native-s
 oc tag quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 ubi-quarkus-native-s2i:20.3.1-java11 --namespace data-transform
 oc tag quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 ubi-quarkus-native-s2i:20.3.1-java11 --namespace data-query
 oc tag quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11 ubi-quarkus-native-s2i:20.3.1-java11 --namespace data-validate
+
 ```
 
 Deploy the BuildConfig objects:
