@@ -16,3 +16,7 @@
 - op: replace
   path: /spec/output/to/name
   value: data-extract:latest
+- op: replace
+  path: /spec/strategy/sourceStrategy/from/namespace
+  value: data-extract
+

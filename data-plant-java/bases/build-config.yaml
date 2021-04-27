@@ -1,7 +1,6 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  generation: 4
   labels:
     app: patch-metadata-labels-app
     version: patch-metadata-labels-version
@@ -32,5 +31,6 @@ spec:
       from:
         kind: ImageStreamTag
         name: ubi-quarkus-native-s2i:20.3.1-java11
+        namespace: patch-spec-strategy-sourceStrategy-from-namespace
     type: Source
   successfulBuildsHistoryLimit: 5
