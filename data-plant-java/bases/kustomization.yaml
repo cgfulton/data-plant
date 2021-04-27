@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - build-config.yaml
   - image-stream.yaml
+  - image-stream-tag.yaml

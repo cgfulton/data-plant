@@ -15,3 +15,6 @@ patches:
   - path: patch-common.yaml
     target:
       kind: ImageStream
+  - path: patch-image-stream-tag.yaml
+    target:
+      kind: ImageStreamTag

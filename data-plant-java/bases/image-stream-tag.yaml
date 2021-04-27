@@ -1,0 +1,164 @@
+apiVersion: image.openshift.io/v1
+image:
+  dockerImageLayers:
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:57de4da701b511cba33bbdc424757f7f3b408bea741ca714ace265da9b59191a
+    size: 34109126
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:cf0f3ebe9f536c782ab3835049cfbd9a663761ded9370791ef6ea3965c823aad
+    size: 1472
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:cec70ecc2437c1a7b552b1cb510003ccf4ddffb3d2248745f27f8dd92899e8a1
+    size: 661176477
+  dockerImageManifestMediaType: application/vnd.docker.distribution.manifest.v2+json
+  dockerImageMetadata:
+    Architecture: amd64
+    Config:
+      Cmd:
+      - /usr/libexec/s2i/run
+      Env:
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/graalvm/bin
+      - container=oci
+      - LANG=en_US.UTF-8
+      - LANGUAGE=en_US:en
+      - LC_ALL=en_US.UTF-8
+      - QUARKUS_HOME=/home/quarkus
+      - MAVEN_HOME=/usr/share/maven
+      - MAVEN_OPTS=-XX:+TieredCompilation -XX:TieredStopAtLevel=1
+      - MAVEN_VERSION=3.6.3
+      - FILENAME=graalvm-ce-linux-amd64-20.3.1-java11.tar.gz
+      - GRAALVM_HOME=/opt/graalvm
+      - GRAALVM_VERSION=java11-20.3.1
+      - JAVA_HOME=/opt/graalvm
+      - GRADLE_HOME=/usr/share/gradle
+      - GRADLE_OPTS=-Dorg.gradle.daemon=false
+      - GRADLE_VERSION=6.3
+      ExposedPorts:
+        8080/tcp: {}
+      Hostname: 94d5a8f5acb6
+      Image: b02e2fd9c1e6b184366376a6cd0623c09d33e1a6e3b709220eefc54ec18159a0
+      Labels:
+        architecture: x86_64
+        authoritative-source-url: registry.access.redhat.com
+        build-date: 2019-09-16T12:28:09.399802
+        com.redhat.build-host: cpt-1002.osbs.prod.upshift.rdu2.redhat.com
+        com.redhat.component: ubi8-minimal-container
+        com.redhat.license_terms: https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI
+        description: The Universal Base Image Minimal is a stripped down image that
+          uses microdnf as a package manager. This base image is freely redistributable,
+          but Red Hat only supports Red Hat technologies through subscriptions for
+          Red Hat products. This image is maintained by Red Hat and updated regularly.
+        distribution-scope: public
+        graalvm-archive-filename: graalvm-ce-linux-amd64-20.3.1-java11.tar.gz
+        graalvm-archive-url: https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.3.1/graalvm-ce-java11-linux-amd64-20.3.1.tar.gz
+        graalvm-version: java11-20.3.1
+        io.cekit.version: 3.8.0
+        io.k8s.description: Quarkus.io S2I image for building Kubernetes Native Java
+          GraalVM applications and running its Native Executables
+        io.k8s.display-name: Quarkus.io S2I (GraalVM Native)
+        io.openshift.expose-services: 8080:http
+        io.openshift.s2i.destination: /tmp
+        io.openshift.s2i.scripts-url: image:///usr/libexec/s2i
+        io.openshift.tags: builder,java,quarkus,native
+        maintainer: Quarkus Team <quarkus-dev@googlegroups.com>
+        name: ubi8-minimal
+        release: "213"
+        summary: Provides the latest release of the minimal Red Hat Universal Base
+          Image 8.
+        url: https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8-minimal/images/8.0-213
+        vcs-ref: cd4b5a1918e11cd510080cc6ee5496bc730f16cf
+        vcs-type: git
+        vendor: Red Hat, Inc.
+        version: "8.0"
+      User: "1001"
+      WorkingDir: /home/quarkus
+    ContainerConfig:
+      Cmd:
+      - /bin/sh
+      - -c
+      - '#(nop) '
+      - CMD ["/usr/libexec/s2i/run"]
+      Env:
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/graalvm/bin
+      - container=oci
+      - LANG=en_US.UTF-8
+      - LANGUAGE=en_US:en
+      - LC_ALL=en_US.UTF-8
+      - QUARKUS_HOME=/home/quarkus
+      - MAVEN_HOME=/usr/share/maven
+      - MAVEN_OPTS=-XX:+TieredCompilation -XX:TieredStopAtLevel=1
+      - MAVEN_VERSION=3.6.3
+      - FILENAME=graalvm-ce-linux-amd64-20.3.1-java11.tar.gz
+      - GRAALVM_HOME=/opt/graalvm
+      - GRAALVM_VERSION=java11-20.3.1
+      - JAVA_HOME=/opt/graalvm
+      - GRADLE_HOME=/usr/share/gradle
+      - GRADLE_OPTS=-Dorg.gradle.daemon=false
+      - GRADLE_VERSION=6.3
+      ExposedPorts:
+        8080/tcp: {}
+      Hostname: 94d5a8f5acb6
+      Image: sha256:03e807ebf10273c56157f4ad65e35560273c04be1dc6833b1df7de1d6f46e83c
+      Labels:
+        architecture: x86_64
+        authoritative-source-url: registry.access.redhat.com
+        build-date: 2019-09-16T12:28:09.399802
+        com.redhat.build-host: cpt-1002.osbs.prod.upshift.rdu2.redhat.com
+        com.redhat.component: ubi8-minimal-container
+        com.redhat.license_terms: https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI
+        description: The Universal Base Image Minimal is a stripped down image that
+          uses microdnf as a package manager. This base image is freely redistributable,
+          but Red Hat only supports Red Hat technologies through subscriptions for
+          Red Hat products. This image is maintained by Red Hat and updated regularly.
+        distribution-scope: public
+        graalvm-archive-filename: graalvm-ce-linux-amd64-20.3.1-java11.tar.gz
+        graalvm-archive-url: https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.3.1/graalvm-ce-java11-linux-amd64-20.3.1.tar.gz
+        graalvm-version: java11-20.3.1
+        io.cekit.version: 3.8.0
+        io.k8s.description: Quarkus.io S2I image for building Kubernetes Native Java
+          GraalVM applications and running its Native Executables
+        io.k8s.display-name: Quarkus.io S2I (GraalVM Native)
+        io.openshift.expose-services: 8080:http
+        io.openshift.s2i.destination: /tmp
+        io.openshift.s2i.scripts-url: image:///usr/libexec/s2i
+        io.openshift.tags: builder,java,quarkus,native
+        maintainer: Quarkus Team <quarkus-dev@googlegroups.com>
+        name: ubi8-minimal
+        release: "213"
+        summary: Provides the latest release of the minimal Red Hat Universal Base
+          Image 8.
+        url: https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8-minimal/images/8.0-213
+        vcs-ref: cd4b5a1918e11cd510080cc6ee5496bc730f16cf
+        vcs-type: git
+        vendor: Red Hat, Inc.
+        version: "8.0"
+      User: "1001"
+      WorkingDir: /home/quarkus
+    Created: "2021-02-14T01:22:02Z"
+    DockerVersion: 20.10.2+azure
+    Id: sha256:9ce72955d929fc771ce4dd5b658ff05acf663bbe59879c569cbe3a9ba8e214ac
+    Size: 695293030
+    apiVersion: image.openshift.io/1.0
+    kind: DockerImage
+  dockerImageMetadataVersion: "1.0"
+  dockerImageReference: quay.io/quarkus/ubi-quarkus-native-s2i@sha256:c8a7b0ece157b64ef00e2eb6219a271fcea90b8ca41448d5b07a234eac656f88
+  metadata:
+    annotations:
+      image.openshift.io/dockerLayersOrder: ascending
+    name: sha256:c8a7b0ece157b64ef00e2eb6219a271fcea90b8ca41448d5b07a234eac656f88
+kind: ImageStreamTag
+lookupPolicy:
+  local: false
+metadata:
+  name: ubi-quarkus-native-s2i:20.3.1-java11
+  namespace: patch-metadata-namespace
+tag:
+  annotations: null
+  from:
+    kind: DockerImage
+    name: quay.io/quarkus/ubi-quarkus-native-s2i:20.3.1-java11
+  generation: 11
+  importPolicy: {}
+  name: 20.3.1-java11
+  referencePolicy:
+    type: Source
