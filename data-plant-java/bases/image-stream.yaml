@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ImageStream
+metadata:
+  labels:
+    app: patch-metadata-labels-app
+    version: patch-metadata-labels-version
+    account: patch-metadata-labels-account
+  name: patch-metadata-name
+  namespace: patch-metadata-namespace
+spec:
+  lookupPolicy:
+    local: patch-spec-lookupPolicy-local

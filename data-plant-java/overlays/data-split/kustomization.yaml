@@ -6,3 +6,12 @@ patches:
   - path: patch-build-config.yaml
     target:
       kind: BuildConfig
+  - path: patch-common.yaml
+    target:
+      kind: BuildConfig
+  - path: patch-image-stream.yaml
+    target:
+      kind: ImageStream
+  - path: patch-common.yaml
+    target:
+      kind: ImageStream

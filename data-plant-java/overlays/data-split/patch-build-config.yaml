@@ -1,19 +1,4 @@
 - op: replace
-  path: /metadata/name
-  value: data-split
-- op: replace
-  path: /metadata/namespace
-  value: data-split
-- op: replace
-  path: /metadata/labels/account
-  value: data-split
-- op: replace
-  path: /metadata/labels/app
-  value: data-split
-- op: replace
-  path: /metadata/labels/version
-  value: v1
-- op: replace
   path: /spec/output/to/name
   value: data-split:latest
 - op: replace
