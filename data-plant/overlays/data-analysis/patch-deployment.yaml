@@ -29,6 +29,9 @@
   path: /spec/template/metadata/labels/version
   value: v1
 - op: replace
+  path: /spec/template/metadata/labels/deployment
+  value: data-analysis
+- op: replace
   path: /spec/template/spec/serviceAccountName
   value: data-analysis
 - op: replace

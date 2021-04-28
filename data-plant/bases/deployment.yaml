@@ -18,6 +18,7 @@ spec:
       labels:
         app: patch-spec-template-metadata-labels-app
         version: patch-spec-template-metadata-labels-version
+        deployment: patch-spec-template-metadata-labels-deployment
     spec:
       serviceAccountName: patch-spec-template-spec-serviceAccountName
       containers:
