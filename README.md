@@ -1,18 +1,29 @@
-# mlops-plant
+# mlops-plane
 
 ## Install Projects
 
 ### [operator-plane](./data-plane)
 Installs OpenShift operators.
+```console 
+kustomize build operator-plane | oc apply -f-
+```
 
 ### [control-plane](./control-plane)
-Installs the service mesh control plane.
+Install the service mesh control plane.
+```console 
+kustomize build control-plane | oc apply -f-
+```
 
 ### [data-plane](./data-plane) 
-Installs the service mesh data plane.
+Install the service mesh data plane.
+```console 
+kustomize build data-plane | oc apply -f-
+```
 
-### [data-plant-java](./data-plant-java)
-A Java implementation of the `data-plant` components.
+### [image-plane](./image-plane)
+```console 
+kustomize build image-plane | oc apply -f-
+```
 
 ## References
 
