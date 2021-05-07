@@ -1,0 +1,21 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: patch-metadata-name
+  namespace: patch-metadata-namespace
+  labels:
+    account: patch-metadata-labels-account
+    app: patch-metadata-labels-app
+    version: patch-metadata-labels-version
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: patch-spec-servers-0-port-number
+      name: patch-spec-servers-0-port-name
+      protocol: patch-spec-servers-0-port-protocol
+#    hosts:
+#      - "*"
+    hosts:
+    - patch-spec-servers-0-hosts-0

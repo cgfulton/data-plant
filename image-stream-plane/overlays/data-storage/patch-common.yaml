@@ -1,0 +1,15 @@
+- op: replace
+  path: /metadata/name
+  value: data-storage
+- op: replace
+  path: /metadata/namespace
+  value: data-storage
+- op: replace
+  path: /metadata/labels/account
+  value: data-storage
+- op: replace
+  path: /metadata/labels/app
+  value: data-storage
+- op: replace
+  path: /metadata/labels/version
+  value: v1

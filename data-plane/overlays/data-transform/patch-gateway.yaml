@@ -1,0 +1,12 @@
+- op: replace
+  path: /spec/servers/0/port/number
+  value: 80
+- op: replace
+  path: /spec/servers/0/port/name
+  value: http
+- op: replace
+  path: /spec/servers/0/port/protocol
+  value: HTTP
+- op: replace
+  path: /spec/servers/0/hosts/0
+  value: data-transform-data-transform.apps.cluster-b8c4.b8c4.sandbox1207.opentlc.com

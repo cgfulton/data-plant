@@ -1,0 +1,9 @@
+- op: replace
+  path: /spec/host
+  value: data-evaluate
+- op: replace
+  path: /spec/subsets/0/name
+  value: data-evaluate
+- op: replace
+  path: /spec/subsets/0/labels/version
+  value: v1

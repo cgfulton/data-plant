@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: patch-metadata-name
+  namespace: patch-metadata-namespace
+  labels:
+    account: patch-metadata-labels-account
+    app: patch-metadata-labels-app
+    version: patch-metadata-labels-version
+spec:
+  hosts:
+    - patch-spec-hosts-0
+  gateways:
+    - patch-gateways-0
+  http:
+    - match:
+      - uri:
+          exact: /greeting
+      route:
+      - destination:
+          host: patch-spec-http-0-route-0-destination-host
+          subset: patch-spec-http-0-route-0-destination-subset
+          port:
+            number: 8080

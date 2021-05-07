@@ -1,9 +1,0 @@
-- op: replace
-  path: /metadata/name
-  value: data-query
-- op: replace
-  path: /spec/host
-  value: data-query
-- op: replace
-  path: /metadata/namespace
-  value: data-query

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: patch-metadata-name
+  namespace: patch-metadata-namespace
+  labels:
+    account: patch-metadata-labels-account
+    app: patch-metadata-labels-app
+    version: patch-metadata-labels-version
+spec:
+  replicas: patch-spec-replicas
+  selector:
+    matchLabels:
+      app: patch-spec-matchLabels-app
+      version: patch-spec-matchLabels-version
+  template:
+    metadata:
+      labels:
+        app: patch-spec-template-metadata-labels-app
+        version: patch-spec-template-metadata-labels-version
+        deployment: patch-spec-template-metadata-labels-deployment
+    spec:
+      serviceAccountName: patch-spec-template-spec-serviceAccountName
+      containers:
+        - name: patch-spec-template-spec-container-0-name
+          image: patch-spec-template-spec-container-0-image
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080

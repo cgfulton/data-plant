@@ -1,14 +1,17 @@
 # mlops-plant
 
-Installs project dependencies.
+## Install Projects
 
-## [control-plant](./control-plant) 
+### [operator-plane](./data-plane)
+Installs OpenShift operators.
+
+### [control-plane](./control-plane)
 Installs the service mesh control plane.
 
-## [data-plant](./data-plant)
-Installs service mesh objects that link the operational components.
+### [data-plane](./data-plane) 
+Installs the service mesh data plane.
 
-##[data-plant-java](./data-plant-java)
+### [data-plant-java](./data-plant-java)
 A Java implementation of the `data-plant` components.
 
 ## References

@@ -1,0 +1,12 @@
+- op: replace
+  path: /spec/hosts/0
+  value: data-clean
+- op: replace
+  path: /spec/gateways/0
+  value: data-clean
+- op: replace
+  path: /spec/http/0/route/0/destination/subset
+  value: v1
+- op: replace
+  path: /spec/http/0/route/0/destination/host
+  value: data-clean
