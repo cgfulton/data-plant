@@ -39,9 +39,6 @@ patches:
   - path: patch-common.yaml
     target:
       kind: Service
-  - path: patch-gateway.yaml
-    target:
-      kind: Gateway
   - path: patch-common.yaml
     target:
       kind: Gateway

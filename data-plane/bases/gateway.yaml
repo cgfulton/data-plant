@@ -12,10 +12,8 @@ spec:
     istio: ingressgateway
   servers:
   - port:
-      number: patch-spec-servers-0-port-number
-      name: patch-spec-servers-0-port-name
-      protocol: patch-spec-servers-0-port-protocol
-#    hosts:
-#      - "*"
+      number: 80
+      name: http
+      protocol: HTTP
     hosts:
-    - patch-spec-servers-0-hosts-0
+      - "*"
