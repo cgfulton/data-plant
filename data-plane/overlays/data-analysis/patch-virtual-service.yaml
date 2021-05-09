@@ -1,12 +1,15 @@
 - op: replace
-  path: /spec/hosts/0
+  path: /metadata/name
   value: data-analysis
 - op: replace
-  path: /spec/gateways/0
+  path: /metadata/namespace
   value: data-analysis
 - op: replace
-  path: /spec/http/0/route/0/destination/subset
+  path: /metadata/labels/app
+  value: data-analysis
+- op: replace
+  path: /metadata/labels/version
   value: v1
 - op: replace
-  path: /spec/http/0/route/0/destination/host
+  path: /spec/selector/app
   value: data-analysis

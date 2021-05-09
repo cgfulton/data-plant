@@ -1,4 +1,10 @@
 - op: replace
+  path: /metadata/labels/app
+  value: data-analysis
+- op: replace
+  path: /metadata/labels/version
+  value: v1
+- op: replace
   path: /spec/replicas
   value: 1
 - op: replace
@@ -13,9 +19,6 @@
 - op: replace
   path: /spec/template/metadata/labels/version
   value: v1
-- op: replace
-  path: /spec/template/metadata/labels/deployment
-  value: data-analysis
 - op: replace
   path: /spec/template/spec/serviceAccountName
   value: data-analysis

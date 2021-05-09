@@ -1,6 +1,6 @@
 - op: replace
   path: /metadata/name
-  value: maistraoperator
+  value: servicemeshoperator
 - op: replace
   path: /metadata/namespace
   value: openshift-operators
@@ -12,10 +12,10 @@
   value: Automaitc
 - op: replace
   path: /spec/name
-  value: maistraoperator
+  value: servicemeshoperator
 - op: replace
   path: /spec/source
-  value: community-operators
+  value: redhat-operators
 - op: replace
   path: /spec/sourceNamespace
   value: openshift-marketplace
