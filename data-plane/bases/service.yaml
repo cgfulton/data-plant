@@ -4,7 +4,6 @@ metadata:
   labels:
     app: patch-metadata-labels-app
     version: patch-metadata-labels-version
-    account: patch-metadata-labels-account
   name: patch-metadata-name
   namespace: patch-metadata-namespace
 spec:
@@ -12,6 +11,5 @@ spec:
   - name: 8080-tcp
     port: 8080
     protocol: TCP
-    targetPort: 8080
   selector:
     app: patch-spec-selector-app

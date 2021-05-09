@@ -2,6 +2,12 @@
 
 ## Install Projects
 
+### [common-plane](./common-plane)
+Install the common components.
+```console 
+kustomize build common-plane | oc apply -f-
+```
+
 ### [operator-plane](./data-plane)
 Installs OpenShift operators.
 ```console 
@@ -14,15 +20,15 @@ Install the service mesh control plane.
 kustomize build control-plane | oc apply -f-
 ```
 
+### [image-plane](./image-plane)
+```console 
+kustomize build image-plane | oc apply -f-
+```
+
 ### [data-plane](./data-plane) 
 Install the service mesh data plane.
 ```console 
 kustomize build data-plane | oc apply -f-
-```
-
-### [image-plane](./image-plane)
-```console 
-kustomize build image-plane | oc apply -f-
 ```
 
 ## References

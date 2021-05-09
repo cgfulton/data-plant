@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
-  - ../../../bases
+  - ../../bases
 patches:
   - path: patch-metadata.yaml
     target:
@@ -15,12 +15,6 @@ patches:
   - path: patch-metadata.yaml
     target:
       kind: DestinationRule
-  - path: patch-virtual-service.yaml
-    target:
-      kind: VirtualService
-  - path: patch-metadata.yaml
-    target:
-      kind: VirtualService
   - path: patch-route.yaml
     target:
       kind: Route
@@ -42,3 +36,9 @@ patches:
   - path: patch-metadata.yaml
     target:
       kind: Gateway
+  - path: patch-metadata.yaml
+    target:
+      kind: VirtualService
+  - path: patch-virtual-service.yaml
+    target:
+      kind: VirtualService

@@ -3,10 +3,6 @@ kind: Gateway
 metadata:
   name: patch-metadata-name
   namespace: patch-metadata-namespace
-  labels:
-    account: patch-metadata-labels-account
-    app: patch-metadata-labels-app
-    version: patch-metadata-labels-version
 spec:
   selector:
     istio: ingressgateway

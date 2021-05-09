@@ -1,15 +1,15 @@
 - op: replace
-  path: /metadata/name
+  path: /spec/hosts/0
+  value: "*"
+- op: replace
+  path: /spec/gateways/0
   value: data-analysis
 - op: replace
-  path: /metadata/namespace
+  path: /spec/http/0/match/0/uri/exact
+  value: /hello
+- op: replace
+  path: /spec/http/0/route/0/destination/host
   value: data-analysis
 - op: replace
-  path: /metadata/labels/app
-  value: data-analysis
-- op: replace
-  path: /metadata/labels/version
-  value: v1
-- op: replace
-  path: /spec/selector/app
-  value: data-analysis
+  path: /spec/http/0/route/0/destination/port/number
+  value: 8080

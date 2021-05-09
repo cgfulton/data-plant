@@ -1,9 +1,3 @@
 - op: replace
-  path: /metadata/name
-  value: data-analysis
-- op: replace
-  path: /metadata/namespace
-  value: data-analysis
-- op: replace
   path: /spec/to/name
   value: data-analysis

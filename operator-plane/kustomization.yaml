@@ -4,4 +4,4 @@ bases:
   - overlays/operator-elasticsearch
   - overlays/operator-jaeger
   - overlays/operator-kiali
-  - overlays/operator-maistra
+  - overlays/operator-service-mesh

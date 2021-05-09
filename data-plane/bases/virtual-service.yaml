@@ -1,20 +1,19 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: data-analysis-virtual-service-gateway
-  namespace: data-analysis
+  name: patch-metadata-name
+  namespace: patch-metadata-namespace
 spec:
   hosts:
-    - "*"
+    - patch-virtual-service-spec-hosts-0
   gateways:
-    - data-analysis
+    - patch-virtual-service-spec-gateways-0
   http:
     - match:
         - uri:
-            exact: /hello
+            exact: patch-virtual-service-spec-http-0-route-0-uri-exact
       route:
         - destination:
-            host: data-analysis
-            subset: v1
+            host: patch-virtual-service-spec-http-0-route-0-destination-host
             port:
-              number: 8080
+              number: patch-virtual-service-spec-http-0-route-0-destination-port-number
