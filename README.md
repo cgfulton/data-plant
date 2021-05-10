@@ -28,7 +28,6 @@ kustomize build control-plane | oc apply -f-
 
 ### [image-plane](./image-plane)
 Build and deploy the images.
-
 ```console 
 kustomize build image-plane | oc apply -f-
 ```
