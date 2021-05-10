@@ -15,12 +15,6 @@ patches:
   - path: patch-metadata.yaml
     target:
       kind: DestinationRule
-  - path: patch-route.yaml
-    target:
-      kind: Route
-  - path: patch-metadata.yaml
-    target:
-      kind: Route
   - path: patch-deployment.yaml
     target:
       kind: Deployment

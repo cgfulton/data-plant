@@ -1,6 +1,6 @@
 - op: replace
   path: /metadata/name
-  value: data-analysis
+  value: data-extract
 - op: replace
   path: /metadata/namespace
-  value: data-analysis
+  value: data-extract

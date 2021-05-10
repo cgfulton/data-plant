@@ -1,6 +1,6 @@
 - op: replace
   path: /metadata/labels/app
-  value: data-analysis
+  value: data-extract
 - op: replace
   path: /metadata/labels/version
   value: v1
@@ -9,25 +9,25 @@
   value: 1
 - op: replace
   path: /spec/selector/matchLabels/app
-  value: data-analysis
+  value: data-extract
 - op: replace
   path: /spec/selector/matchLabels/version
   value: v1
 - op: replace
   path: /spec/template/metadata/labels/app
-  value: data-analysis
+  value: data-extract
 - op: replace
   path: /spec/template/metadata/labels/version
   value: v1
 - op: replace
   path: /spec/template/spec/serviceAccountName
-  value: data-analysis
+  value: data-extract
 - op: replace
   path: /spec/template/spec/containers/0/name
-  value: data-analysis
+  value: data-extract
 - op: replace
   path: /spec/template/spec/containers/0/image
-  value: "data-analysis:latest"
+  value: "data-extract:latest"
 
 
 

@@ -3,13 +3,13 @@
   value: "*"
 - op: replace
   path: /spec/gateways/0
-  value: data-analysis
+  value: data-split
 - op: replace
   path: /spec/http/0/match/0/uri/exact
   value: /hello
 - op: replace
   path: /spec/http/0/route/0/destination/host
-  value: data-analysis
+  value: data-split
 - op: replace
   path: /spec/http/0/route/0/destination/port/number
   value: 8080

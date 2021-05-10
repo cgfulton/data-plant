@@ -5,6 +5,6 @@ bases:
   - operator-plane
   - control-plane
   - data-plane
-  - image-stream-plane
+  - image-plane
 
 
