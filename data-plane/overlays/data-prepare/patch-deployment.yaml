@@ -1,30 +1,33 @@
 - op: replace
+  path: /metadata/labels/app
+  value: data-analysis
+- op: replace
+  path: /metadata/labels/version
+  value: v1
+- op: replace
   path: /spec/replicas
   value: 1
 - op: replace
   path: /spec/selector/matchLabels/app
-  value: data-prepare
+  value: data-analysis
 - op: replace
   path: /spec/selector/matchLabels/version
   value: v1
 - op: replace
   path: /spec/template/metadata/labels/app
-  value: data-prepare
+  value: data-analysis
 - op: replace
   path: /spec/template/metadata/labels/version
   value: v1
 - op: replace
-  path: /spec/template/metadata/labels/deployment
-  value: data-prepare
-- op: replace
   path: /spec/template/spec/serviceAccountName
-  value: data-prepare
+  value: data-analysis
 - op: replace
   path: /spec/template/spec/containers/0/name
-  value: data-prepare
+  value: data-analysis
 - op: replace
   path: /spec/template/spec/containers/0/image
-  value: "data-prepare:latest"
+  value: "data-analysis:latest"
 
 
 

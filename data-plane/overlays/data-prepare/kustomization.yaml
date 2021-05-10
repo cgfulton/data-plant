@@ -3,39 +3,42 @@ kind: Kustomization
 bases:
   - ../../bases
 patches:
-  - path: patch-common.yaml
+  - path: patch-metadata.yaml
+    target:
+      kind: ServiceAccount
+  - path: patch-service-account.yaml
     target:
       kind: ServiceAccount
   - path: patch-destination-rule.yaml
     target:
       kind: DestinationRule
-  - path: patch-common.yaml
+  - path: patch-metadata.yaml
     target:
       kind: DestinationRule
-  - path: patch-virtual-service.yaml
-    target:
-      kind: VirtualService
-  - path: patch-common.yaml
-    target:
-      kind: VirtualService
   - path: patch-route.yaml
     target:
       kind: Route
-  - path: patch-common.yaml
+  - path: patch-metadata.yaml
     target:
       kind: Route
   - path: patch-deployment.yaml
     target:
       kind: Deployment
-  - path: patch-common.yaml
+  - path: patch-metadata.yaml
     target:
       kind: Deployment
   - path: patch-service.yaml
     target:
       kind: Service
-  - path: patch-common.yaml
+  - path: patch-metadata.yaml
     target:
       kind: Service
-  - path: patch-common.yaml
+  - path: patch-metadata.yaml
     target:
       kind: Gateway
+  - path: patch-metadata.yaml
+    target:
+      kind: VirtualService
+  - path: patch-virtual-service.yaml
+    target:
+      kind: VirtualService
