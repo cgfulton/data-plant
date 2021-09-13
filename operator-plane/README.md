@@ -20,5 +20,5 @@ Maistra is a platform that provides behavioral insight and operational control o
 ## Install
 
 ```sh 
-kustomize build https://github.com/cgfulton/mlops-plant.git/operator-plant?ref=main | oc apply -f-
+kustomize build https://github.com/cgfulton/plant.git/operator-plant?ref=main | oc apply -f-
 ```

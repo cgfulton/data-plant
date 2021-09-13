@@ -5,7 +5,7 @@ Service Mesh control plane.
 ## Install
 
 ```sh 
-kustomize build https://github.com/cgfulton/mlops-plant.git/control-plant?ref=main | oc apply -f-
+kustomize build https://github.com/cgfulton/plant.git/control-plant?ref=main | oc apply -f-
 ```
 
 ## Status

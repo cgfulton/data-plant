@@ -1,0 +1,28 @@
+{{- if .Values.deployment.create -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "data-analysis.name" . }}
+  namespace: {{ template "data-analysis.namespace" . }}
+  labels:
+    {{- include "data-analysis.labels" $ | nindent 4 }}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+    {{- include "data-analysis.selectorLabels" $ | nindent 4 }}
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "true"
+      labels:
+      {{- include "data-analysis.selectorLabels" $ | nindent 6 }}
+    spec:
+      serviceAccountName: {{ template "data-analysis.serviceAccountName" . }}
+      containers:
+        - name: {{ template "data-analysis.name" . }}
+          image: {{ printf "%s:%s" .Values.image.repository .Values.image.tag }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+{{- end }}

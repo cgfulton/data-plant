@@ -1,22 +1,15 @@
-# mlops-plane
+# MlOps Helm Charts
+Helm Charts for deploying various components of the MlOps project.
 
-## Install Projects
+## Charts
 
-### [common-plane](./common-plane)
-Deploy the ecosystem namespaces.
+### services-resources
+A Helm chart for Kubernetes to deploy services.
 
-Install the common components.
-```console 
-kustomize build common-plane | oc apply -f-
-```
 
-### [operator-plane](./data-plane)
-Deploy the various operators.
+### operators-resources
+A Helm chart for Kubernetes to install the MlOps operators.
 
-Installs OpenShift operators.
-```console 
-kustomize build operator-plane | oc apply -f-
-```
 
 ### [control-plane](./control-plane)
 Deploy the istio system.
