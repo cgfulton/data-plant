@@ -1,0 +1,11 @@
+{{- if .Values.serviceMeshMember.create -}}
+apiVersion: maistra.io/v1
+kind: ServiceMeshMember
+metadata:
+  name: {{ template "service-mesh.namespace" . }}
+  namespace: {{ template "service-mesh.namespace" . }}
+spec:
+  controlPlaneRef:
+    namespace: {{ template "service-mesh.namespace" . }}
+    name: mlops-control-plane
+{{- end }}
