@@ -6,9 +6,9 @@ type: application
 maintainers:
   - name: Red Hat, Inc.
     email: mlops@redhat.com
-# dependencies:
-#  - name: service-mesh
-#    version: ">= 0.0.0 || >= 0.0.0-0"
+dependencies:
+  - name: service-mesh
+    version: ">= 0.0.0 || >= 0.0.0-0"
 # MANAGED BY: GitHub workflow
 version: 0.0.0
 icon: https://avatars.githubusercontent.com/u/74012529?s=200&v=4
