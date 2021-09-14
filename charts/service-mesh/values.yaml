@@ -1,0 +1,37 @@
+namespace:
+  # namespace: Namespace to deploy resources
+  name: ""
+  # namespace.create: Whether to create namespace or not
+  create: true
+
+deployment:
+  # deployment.create: Whether to create deployment or not
+  create: true
+  # deployment.replicas: The number of instances of this deployment to create
+  replicas: 1
+
+image:
+  # image.repository: The location where the image is hosted
+  repository: data-analysis
+  # image.tag: The image version to use
+  tag: latest
+  # image.pullPolicy: Policy that describes when to pull the image
+  pullPolicy: IfNotPresent
+  # image.pullSecret: Credential to access the image repository
+  pullSecret: ""
+
+service:
+  # service.create: Whether to create a service or not
+  create: 'true'
+  # service.labels: Extra labels to be added to service account
+  labels: {app: "data-analysis", version: "0.0.0"}
+  # service.name: The name of the service account to create or use
+  name: "data-analysis"
+
+serviceAccount:
+  # serviceAccount.create: Whether to create a service account or not
+  create: true
+  # serviceAccount.labels: Extra labels to be added to service account
+  labels: {app: "data-analysis", version: "0.0.0"}
+  # serviceAccount.name: The name of the service account to create or use
+  name: "data-analysis"
