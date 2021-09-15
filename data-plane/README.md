@@ -49,5 +49,5 @@ Provides a service mesh overlay for data functionality.
 ## Install
 
 ```sh 
-kustomize build https://github.com/cgfulton/mlops-plant.git/data-plant?ref=main | oc apply -f-
+kustomize build https://github.com/cgfulton/plant.git/data-plant?ref=main | oc apply -f-
 ```

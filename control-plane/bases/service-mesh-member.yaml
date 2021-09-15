@@ -1,9 +1,0 @@
-apiVersion: maistra.io/v1
-kind: ServiceMeshMember
-metadata:
-  name: patch-metadata-name
-  namespace: patch-metadata-namespace
-spec:
-  controlPlaneRef:
-    namespace: patch-spec-controlPlaneRef-namespace
-    name: patch-spec-controlPlaneRef-names

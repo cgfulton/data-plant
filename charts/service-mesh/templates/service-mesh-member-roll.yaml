@@ -1,0 +1,12 @@
+{{- if .Values.serviceMeshMemberRoll.create -}}
+apiVersion: maistra.io/v1
+kind: ServiceMeshMemberRoll
+metadata:
+  name: {{ template "service-mesh.namespace" . }}
+  namespace: {{ template "service-mesh.namespace" . }}
+spec:
+  members:
+  {{- range $.Values.members }}
+  - {{ . }}
+  {{- end }}
+{{- end }}

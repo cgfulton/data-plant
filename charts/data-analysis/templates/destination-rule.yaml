@@ -1,0 +1,11 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: {{ template "data-analysis.name" . }}
+  namespace: {{ template "data-analysis.namespace" . }}
+spec:
+  host: {{ template "data-analysis.name" . }}
+  subsets:
+    - name: {{ template "data-analysis.name" . }}
+      labels:
+      {{- include "data-analysis.selectorLabels" $ | nindent 8 }}

@@ -1,0 +1,32 @@
+namespace:
+  # namespace: Namespace to deploy resources
+  name: ""
+  # namespace.create: Whether to create namespace or not
+  create: true
+
+serviceMeshControlPlane:
+  # serviceMeshControlPlane.create: Whether to create ServiceMeshControlPlane or not
+  create: true
+
+serviceMeshMember:
+  # serviceMeshMember.create: Whether to create ServiceMeshMember or not
+  create: true
+
+serviceMeshMemberRoll:
+  # serviceMeshMemberRoll.create: Whether to create ServiceMeshMemberRoll or not
+  create: true
+
+members:
+  - data-analysis
+# - data-collect
+# - data-extract
+# - data-metadata
+# - data-query
+# - data-storage
+# - data-validate
+# - data-clean
+# - data-evaluate
+# - data-ingress
+# - data-prepare
+# - data-split
+# - data-transform

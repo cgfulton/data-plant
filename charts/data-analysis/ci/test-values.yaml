@@ -1,0 +1,20 @@
+---
+namespace:
+  name: "some-namespace"
+  create: true
+
+deployment:
+  create: true
+  replicas: 100
+
+image:
+  repository: data-analysis
+  tag: latest
+  pullPolicy: IfNotPresent
+  pullSecret: "some-pull-secret"
+
+service:
+  create: true
+
+serviceAccount:
+  create: true
